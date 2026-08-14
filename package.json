@@ -1,0 +1,12 @@
+{
+  "name": "pacific-remodel-website",
+  "version": "1.0.0",
+  "description": "Pacific Remodel and Development Homepage",
+  "main": "index.html",
+  "scripts": {
+    "dev": "browser-sync start --server --files \"*.html, *.css, *.js\""
+  },
+  "devDependencies": {
+    "browser-sync": "^3.0.2"
+  }
+}

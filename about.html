@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Pacific Remodel and Development</title>
+    <meta name="description" content="Learn about Pacific Remodel and Development: 10+ years of luxury construction expertise, 15+ year Pacific Palisades resident, licensed CA contractor #1111456.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="index.css">
+    <style>
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            margin-top: 40px;
+        }
+        .value-card {
+            background-color: var(--color-white);
+            padding: 30px 24px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+            border-top: 4px solid var(--color-slate-blue);
+        }
+        .value-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(93, 63, 211, 0.12);
+        }
+        .value-icon {
+            width: 54px;
+            height: 54px;
+            border-radius: 12px;
+            background-color: rgba(93, 63, 211, 0.1);
+            color: var(--color-slate-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+        }
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 45px;
+        }
+        .testimonial-card {
+            background-color: var(--color-white);
+            padding: 35px 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .testimonial-stars {
+            color: #f59e0b;
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+        .testimonial-text {
+            font-size: 0.95rem;
+            color: var(--color-dark-text);
+            line-height: 1.6;
+            margin-bottom: 25px;
+            font-style: italic;
+        }
+        .testimonial-author h4 {
+            font-size: 1rem;
+            font-weight: 800;
+            color: var(--color-navy);
+        }
+        .testimonial-author p {
+            font-size: 0.8rem;
+            color: var(--color-slate-blue);
+            font-weight: 600;
+        }
+        @media (max-width: 992px) {
+            .values-grid { grid-template-columns: repeat(2, 1fr); }
+            .testimonials-grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 600px) {
+            .values-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navbar -->
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html" class="logo-link">
+                <img src="assets/logo.png" alt="Pacific Remodel and Development" class="logo-img">
+            </a>
+            
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <nav class="nav" id="navMenu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link">HOME</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link active">ABOUT US</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">SERVICES</a></li>
+                    <li class="nav-item"><a href="projects.html" class="nav-link">PROJECTS</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">CONTACT</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-cta">
+                <a href="contact.html" class="btn btn-primary-header">
+                    GET A QUOTE <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Nav Drawer -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay">
+        <ul class="mobile-nav-list">
+            <li><a href="index.html" class="mobile-nav-link">HOME</a></li>
+            <li><a href="about.html" class="mobile-nav-link active">ABOUT US</a></li>
+            <li><a href="services.html" class="mobile-nav-link">SERVICES</a></li>
+            <li><a href="projects.html" class="mobile-nav-link">PROJECTS</a></li>
+            <li><a href="contact.html" class="mobile-nav-link">CONTACT</a></li>
+            <li><a href="contact.html" class="btn btn-primary-mobile">GET A QUOTE <i class="fa-solid fa-arrow-right"></i></a></li>
+        </ul>
+    </div>
+
+    <!-- Subpage Hero Banner -->
+    <section class="subpage-hero">
+        <div class="subpage-hero-bg hero-bg-about"></div>
+        <div class="blueprint-grid"></div>
+        <div class="container">
+            <div class="subpage-hero-content fade-in-up">
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span class="breadcrumb-separator"><i class="fa-solid fa-chevron-right"></i></span>
+                    <span>About Us</span>
+                </div>
+                <h1 class="subpage-title">ABOUT PACIFIC REMODEL & DEVELOPMENT</h1>
+                <p class="subpage-subtitle">Built on trust. Focused on quality. Driven by results. Serving Pacific Palisades & Los Angeles with over 10 years of general contracting excellence.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Exclusive About Story Section -->
+    <section class="about-story-section">
+        <div class="container">
+            <div class="about-story-grid">
+                <!-- Left: Dual Image Overlapping Composition -->
+                <div class="story-image-composition scroll-animate fade-in-left">
+                    <div class="story-experience-badge">
+                        <div class="badge-icon-circle">
+                            <i class="fa-solid fa-house-chimney-user"></i>
+                        </div>
+                        <div>
+                            <div class="badge-text-title">15+ YEARS RESIDENT</div>
+                            <div class="badge-text-sub">Pacific Palisades Local Commitment</div>
+                        </div>
+                    </div>
+                    
+                    <img src="assets/service_new_construction.png" alt="Pacific Remodel Ground-Up Luxury Estate Construction" class="story-img-main">
+                    <img src="assets/palisades-gourmet-kitchen.jpg" alt="Pacific Remodel Gourmet Kitchen Craftsmanship" class="story-img-secondary">
+                </div>
+
+                <!-- Right: Story & Pillars Content -->
+                <div class="about-story-content scroll-animate fade-in-right">
+                    <span class="section-tag">CRAFTING LUXURY ESTATES</span>
+                    <h2 class="about-story-title">ENGINEERED FOR PRECISION. BUILT FOR GENERATIONS.</h2>
+                    
+                    <p class="about-story-paragraph">
+                        Pacific Remodel and Development was founded with a singular mission: to deliver uncompromising luxury construction, structural integrity, and refined architectural aesthetics across West Los Angeles.
+                    </p>
+                    <p class="about-story-paragraph">
+                        With over 10 years of general contracting experience and 15+ years living in Pacific Palisades, we understand the local coastal micro-climates, hillside engineering, and stringent municipal guidelines required to build world-class estates.
+                    </p>
+
+                    <!-- Story Highlight Boxes -->
+                    <div class="story-highlights-grid">
+                        <div class="story-highlight-box">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            <span>High-End Luxury Homes & Major Remodels</span>
+                        </div>
+                        <div class="story-highlight-box">
+                            <i class="fa-solid fa-compass-drafting"></i>
+                            <span>In-House Permit & Architectural Engineering</span>
+                        </div>
+                        <div class="story-highlight-box">
+                            <i class="fa-solid fa-file-invoice-dollar"></i>
+                            <span>Transparent Line-Item Budgeting & Accounting</span>
+                        </div>
+                        <div class="story-highlight-box">
+                            <i class="fa-solid fa-award"></i>
+                            <span>Licensed, Bonded & Insured (Lic. #1111456)</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <a href="projects.html" class="btn btn-solid-blue">EXPLORE PORTFOLIO <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Horizontal Stats Ribbon -->
+    <section class="about-stats-ribbon">
+        <div class="container">
+            <div class="stats-ribbon-grid scroll-animate fade-in-up">
+                <div class="ribbon-stat-item">
+                    <div class="ribbon-stat-number">
+                        <span class="stat-number" data-target="50" style="color: #ffffff !important; font-size: 3rem; font-weight: 800;">50</span><span class="ribbon-stat-plus" style="color: #8067e3 !important; font-size: 2.2rem; font-weight: 800;">+</span>
+                    </div>
+                    <div class="ribbon-stat-label">PROJECTS COMPLETED</div>
+                </div>
+                <div class="ribbon-stat-item">
+                    <div class="ribbon-stat-number">
+                        <span class="stat-number" data-target="10" style="color: #ffffff !important; font-size: 3rem; font-weight: 800;">10</span><span class="ribbon-stat-plus" style="color: #8067e3 !important; font-size: 2.2rem; font-weight: 800;">+</span>
+                    </div>
+                    <div class="ribbon-stat-label">YEARS OF EXPERIENCE</div>
+                </div>
+                <div class="ribbon-stat-item">
+                    <div class="ribbon-stat-number">
+                        <span class="stat-number" data-target="15" style="color: #ffffff !important; font-size: 3rem; font-weight: 800;">15</span><span class="ribbon-stat-plus" style="color: #8067e3 !important; font-size: 2.2rem; font-weight: 800;">+</span>
+                    </div>
+                    <div class="ribbon-stat-label">YEARS PALISADES RESIDENT</div>
+                </div>
+                <div class="ribbon-stat-item">
+                    <div class="ribbon-stat-number">
+                        <span class="stat-number" data-target="100" style="color: #ffffff !important; font-size: 3rem; font-weight: 800;">100</span><span class="ribbon-stat-plus" style="color: #8067e3 !important; font-size: 2.2rem; font-weight: 800;">%</span>
+                    </div>
+                    <div class="ribbon-stat-label">SATISFACTION GUARANTEED</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values Section -->
+    <section style="padding: 90px 0; background-color: var(--color-bg-sand);">
+        <div class="container">
+            <div class="text-center scroll-animate fade-in-up" style="text-align: center; max-width: 700px; margin: 0 auto;">
+                <span class="section-tag">CORE PHILOSOPHY</span>
+                <h2 class="section-title">THE STANDARDS WE BUILD BY</h2>
+                <p class="section-desc">Our core principles guide every foundation laid, wall raised, and custom finish installed.</p>
+            </div>
+
+            <div class="values-grid scroll-animate fade-in-up">
+                <!-- Value 1 -->
+                <div class="value-card">
+                    <div class="value-icon"><i class="fa-solid fa-gem"></i></div>
+                    <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--color-navy); margin-bottom: 10px;">Uncompromising Quality</h3>
+                    <p style="font-size: 0.9rem; color: var(--color-muted-text); line-height: 1.5;">We source premium materials and enforce master-level construction standards across structural framing, plumbing, electrical, and finish trades.</p>
+                </div>
+
+                <!-- Value 2 -->
+                <div class="value-card">
+                    <div class="value-icon"><i class="fa-solid fa-comments-dollar"></i></div>
+                    <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--color-navy); margin-bottom: 10px;">Transparent Honesty</h3>
+                    <p style="font-size: 0.9rem; color: var(--color-muted-text); line-height: 1.5;">Detailed line-item proposals, open financial accounting, and regular client updates ensure zero financial or timeline surprises.</p>
+                </div>
+
+                <!-- Value 3 -->
+                <div class="value-card">
+                    <div class="value-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+                    <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--color-navy); margin-bottom: 10px;">Local Pacific Palisades Roots</h3>
+                    <p style="font-size: 0.9rem; color: var(--color-muted-text); line-height: 1.5;">Over 15 years living and operating in Pacific Palisades means deep knowledge of local coastal guidelines, zoning codes, and neighborhood expectations.</p>
+                </div>
+
+                <!-- Value 4 -->
+                <div class="value-card">
+                    <div class="value-icon"><i class="fa-solid fa-clock-rotate-left"></i></div>
+                    <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--color-navy); margin-bottom: 10px;">On-Time Delivery</h3>
+                    <p style="font-size: 0.9rem; color: var(--color-muted-text); line-height: 1.5;">Dedicated daily site management keeps trades aligned, materials delivered on schedule, and completion dates strictly met.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Licensing & Credential Spotlight -->
+    <section style="padding: 70px 0; background-color: var(--color-navy); color: var(--color-white);">
+        <div class="container">
+            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 30px;" class="scroll-animate fade-in-up">
+                <div style="max-width: 600px;">
+                    <span class="cta-tag" style="color: var(--color-slate-light);">LICENSED, BONDED & FULLY INSURED</span>
+                    <h2 style="font-size: 2rem; font-weight: 800; color: var(--color-white); margin-top: 6px;">CALIFORNIA LICENSED GENERAL CONTRACTOR</h2>
+                    <p style="color: var(--color-lavender); font-size: 0.95rem; margin-top: 10px;">Pacific Remodel and Development holds active California State License #1111456 with complete general liability, worker's compensation, and bonding for absolute peace of mind.</p>
+                </div>
+                <div>
+                    <div style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.15); padding: 25px 35px; border-radius: 10px; text-align: center;">
+                        <span style="font-family: var(--font-heading); font-size: 0.8rem; font-weight: 700; color: var(--color-slate-light); letter-spacing: 1.5px; display: block;">CA LICENSE NUMBER</span>
+                        <span style="font-family: var(--font-heading); font-size: 2.2rem; font-weight: 800; color: var(--color-white); letter-spacing: 2px;">#1111456</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Testimonials Section -->
+    <section style="padding: 90px 0; background-color: var(--color-white);">
+        <div class="container">
+            <div class="text-center scroll-animate fade-in-up" style="text-align: center; max-width: 700px; margin: 0 auto;">
+                <span class="section-tag">CLIENT TESTIMONIALS</span>
+                <h2 class="section-title">WHAT OUR CLIENTS SAY</h2>
+                <p class="section-desc">Feedback from homeowners across Pacific Palisades, Westwood, and Brentwood who trusted us with their dreams.</p>
+            </div>
+
+            <div class="testimonials-grid scroll-animate fade-in-up">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <div>
+                        <div class="testimonial-stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Pacific Remodel and Development completely transformed our Pacific Palisades home. The vaulted ceilings and gourmet kitchen are beyond what we imagined. Their attention to detail and daily communication made the entire remodel smooth."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <h4>Marcus & Sarah K.</h4>
+                        <p>Pacific Palisades Homeowners</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <div>
+                        <div class="testimonial-stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"The concrete and turf grid paver driveway and security gate they built for our estate turned out incredible. Extremely professional team, honest pricing, and completed right on schedule. Highly recommend!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <h4>David L.</h4>
+                        <p>Westwood Estate Owner</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <div>
+                        <div class="testimonial-stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"From the custom carved marble bathroom vanity to the floating shelves and Thermador kitchen setup, the craftsmanship is top tier. They are true master builders who take immense pride in their work."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <h4>Elena R.</h4>
+                        <p>Brentwood Homeowner</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Area -->
+    <footer id="contact" class="footer">
+        <div class="footer-cta-container">
+            <div class="footer-cta-left">
+                <div class="cta-left-content scroll-animate fade-in-left">
+                    <span class="cta-tag">READY TO START YOUR PROJECT?</span>
+                    <h2 class="cta-heading">Let's build something exceptional together.</h2>
+                    <a href="tel:4247776090" class="btn btn-contact-white">CALL (424) 777-6090 <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-cta-middle scroll-animate fade-in-up">
+                <div class="info-item">
+                    <i class="fa-solid fa-phone info-icon"></i>
+                    <div>
+                        <span class="info-label">CALL US</span>
+                        <a href="tel:4247776090" class="info-value">(424) 777-6090</a>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-envelope info-icon"></i>
+                    <div>
+                        <span class="info-label">EMAIL US</span>
+                        <a href="mailto:info@pacificremodel.us" class="info-value">info@pacificremodel.us</a>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-id-card info-icon"></i>
+                    <div>
+                        <span class="info-label">LICENCE</span>
+                        <span class="info-value">#1111456</span>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-location-dot info-icon"></i>
+                    <div>
+                        <span class="info-label">FIND US</span>
+                        <span class="info-value">927 Westwood Blvd<br>Los Angeles, CA 90024</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-cta-right scroll-animate fade-in-right">
+                <div class="footer-logo-wrap">
+                    <img src="assets/logo.png" alt="Pacific Remodel and Development logo" class="footer-logo-img">
+                </div>
+                <p class="footer-slogan">Locally Owned & Operated in Pacific Palisades</p>
+                <div class="social-links">
+                    <a href="#" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <p>&copy; 2026 Pacific Remodel and Development. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Javascript File -->
+    <script src="app.js"></script>
+</body>
+</html>

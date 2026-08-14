@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pacific Remodel and Development | Remodel. Build. Elevate.</title>
+    <meta name="description" content="Pacific Remodel and Development delivers high-quality construction and remodeling solutions tailored to your vision. Servicing Los Angeles and surrounding areas.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <!-- Header Navbar -->
+    <header class="header">
+        <div class="header-container">
+            <a href="#" class="logo-link">
+                <!-- Img tag with mix-blend-mode: multiply in CSS to remove white background -->
+                <img src="assets/logo.png" alt="Pacific Remodel and Development" class="logo-img">
+            </a>
+            
+            <!-- Mobile Menu Toggle Button -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <!-- Navigation Links -->
+            <nav class="nav" id="navMenu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link active">HOME</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">ABOUT US</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">SERVICES</a></li>
+                    <li class="nav-item"><a href="projects.html" class="nav-link">PROJECTS</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">CONTACT</a></li>
+                </ul>
+            </nav>
+
+            <!-- CTA Header Button -->
+            <div class="header-cta">
+                <a href="contact.html" class="btn btn-primary-header">
+                    GET A QUOTE <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Nav Drawer (Overlay) -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay">
+        <ul class="mobile-nav-list">
+            <li><a href="index.html" class="mobile-nav-link active">HOME</a></li>
+            <li><a href="about.html" class="mobile-nav-link">ABOUT US</a></li>
+            <li><a href="services.html" class="mobile-nav-link">SERVICES</a></li>
+            <li><a href="projects.html" class="mobile-nav-link">PROJECTS</a></li>
+            <li><a href="contact.html" class="mobile-nav-link">CONTACT</a></li>
+            <li><a href="contact.html" class="btn btn-primary-mobile">GET A QUOTE <i class="fa-solid fa-arrow-right"></i></a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-split-container">
+            <!-- Left Side Content -->
+            <div class="hero-content-col">
+                <div class="blueprint-grid"></div>
+                <div class="hero-text-content fade-in-up">
+                    <span class="hero-subtitle">LOCALLY OWNED & OPERATED IN PACIFIC PALISADES</span>
+                    <h1 class="hero-title">
+                        REMODEL.<br>
+                        BUILD.<br>
+                        <span class="text-accent-slate">ELEVATE.</span>
+                    </h1>
+                    <p class="hero-desc">
+                        Pacific Remodel and Development delivers high-quality construction and remodeling solutions. We specialize in high-end luxury single-family homes, major remodels, and custom new construction.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#services" class="btn btn-solid-blue">OUR SERVICES <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="#projects" class="btn btn-outline-white">VIEW PROJECTS <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Side Image -->
+            <div class="hero-img-col">
+                <img src="assets/hero-house.png" alt="Luxury Modern House" class="hero-bg-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="services-grid-container">
+                <!-- Left Intro -->
+                <div class="services-intro scroll-animate fade-in-left">
+                    <span class="section-tag">WHAT WE DO</span>
+                    <h2 class="section-title">SERVICES THAT MAKE A DIFFERENCE</h2>
+                    <p class="section-desc">
+                        From concept to completion, we handle every detail with precision and care.
+                    </p>
+                    <a href="#contact" class="btn btn-outline-navy">VIEW ALL SERVICES <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Right Cards Slider/Grid -->
+                <div class="services-cards-wrapper scroll-animate fade-in-right">
+                    <!-- Card 1 -->
+                    <div class="service-card">
+                        <div class="service-icon-circle bg-slate-blue">
+                            <i class="fa-solid fa-house-chimney"></i>
+                        </div>
+                        <h3 class="service-card-title">HOME REMODELING</h3>
+                        <p class="service-card-desc">Kitchen, bathroom, and whole-home renovations.</p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="service-card">
+                        <div class="service-icon-circle bg-navy">
+                            <i class="fa-solid fa-city"></i>
+                        </div>
+                        <h3 class="service-card-title">NEW CONSTRUCTION</h3>
+                        <p class="service-card-desc">Custom homes and commercial construction.</p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="service-card">
+                        <div class="service-icon-circle bg-lavender">
+                            <i class="fa-solid fa-ruler-combined"></i>
+                        </div>
+                        <h3 class="service-card-title">ADDITIONS</h3>
+                        <p class="service-card-desc">Expand your space with seamless additions.</p>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="service-card">
+                        <div class="service-icon-circle bg-warm-grey">
+                            <i class="fa-solid fa-paint-roller"></i>
+                        </div>
+                        <h3 class="service-card-title">INTERIOR FINISHES</h3>
+                        <p class="service-card-desc">Quality finishes that elevate every detail.</p>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="service-card">
+                        <div class="service-icon-circle bg-olive">
+                            <i class="fa-solid fa-helmet-safety"></i>
+                        </div>
+                        <h3 class="service-card-title">GENERAL CONTRACTING</h3>
+                        <p class="service-card-desc">End-to-end project management you can trust.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <!-- Column 1: Description -->
+                <div class="about-col-text scroll-animate fade-in-left">
+                    <span class="section-tag">ABOUT US</span>
+                    <h2 class="section-title">BUILT ON TRUST. FOCUSED ON QUALITY. DRIVEN BY RESULTS.</h2>
+                    <p class="section-desc">
+                        At Pacific Remodel and Development, we believe every project is a partnership. With over 10 years of experience, we specialize in high-end luxury single-family homes, major remodels, and custom new construction. As a proud Pacific Palisades resident for over 15 years, we focus on quality, clear communication, and craftsmanship that lasts.
+                    </p>
+                    <a href="#projects" class="btn btn-solid-blue">LEARN MORE <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Column 2: Center Image -->
+                <div class="about-col-img scroll-animate fade-in-up">
+                    <div class="about-img-frame">
+                        <img src="assets/kitchen-island.png" alt="Luxury Green Kitchen Island" class="about-center-img">
+                    </div>
+                </div>
+
+                <!-- Column 3: Stats -->
+                <div class="about-col-stats scroll-animate fade-in-right">
+                    <!-- Stat 1 -->
+                    <div class="stat-card">
+                        <div class="stat-icon-wrapper">
+                            <i class="fa-solid fa-users-gear"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-number" data-target="50">50</span><span class="stat-plus">+</span>
+                            <p class="stat-label">PROJECTS COMPLETED</p>
+                        </div>
+                    </div>
+
+                    <!-- Stat 2 -->
+                    <div class="stat-card">
+                        <div class="stat-icon-wrapper">
+                            <i class="fa-solid fa-award"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-number" data-target="10">10</span><span class="stat-plus">+</span>
+                            <p class="stat-label">YEARS OF EXPERIENCE</p>
+                        </div>
+                    </div>
+
+                    <!-- Stat 3 -->
+                    <div class="stat-card">
+                        <div class="stat-icon-wrapper">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-number" data-target="100">100</span><span class="stat-plus">%</span>
+                            <p class="stat-label">CLIENT SATISFACTION</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <div class="projects-grid-container">
+                <!-- Left Title Block -->
+                <div class="projects-intro-block scroll-animate fade-in-left">
+                    <span class="section-tag font-gold">FEATURED PROJECTS</span>
+                    <h2 class="section-title text-white">SPACES WE'RE PROUD TO BUILD</h2>
+                    <p style="color: var(--color-lavender); font-size: 0.95rem; margin-bottom: 25px; line-height: 1.6;">Explore our portfolio of high-end luxury remodels and custom home developments across Pacific Palisades & Los Angeles.</p>
+                    <a href="projects.html" class="btn btn-solid-olive">EXPLORE PORTFOLIO <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Right Projects List (3 Cards) -->
+                <div class="projects-cards-list scroll-animate fade-in-right">
+                    <!-- Project 1 (Flagship Real Project) -->
+                    <a href="project-palisades.html" class="project-card" style="text-decoration: none;">
+                        <div class="project-img-wrapper">
+                            <img src="assets/palisades-front-gate.jpg" alt="452 Pacific Palisades Estate" class="project-img">
+                        </div>
+                        <div class="project-card-title-bar">
+                            <h3>452 PACIFIC PALISADES ESTATE</h3>
+                        </div>
+                    </a>
+
+                    <!-- Project 2 -->
+                    <a href="project-palisades.html" class="project-card" style="text-decoration: none;">
+                        <div class="project-img-wrapper">
+                            <img src="assets/palisades-gourmet-kitchen.jpg" alt="Palisades Gourmet Kitchen Suite" class="project-img">
+                        </div>
+                        <div class="project-card-title-bar">
+                            <h3>PALISADES GOURMET KITCHEN</h3>
+                        </div>
+                    </a>
+
+                    <!-- Project 3 -->
+                    <a href="project-palisades.html" class="project-card" style="text-decoration: none;">
+                        <div class="project-img-wrapper">
+                            <img src="assets/palisades-luxury-bathroom.jpg" alt="Luxury Spa Primary Suite" class="project-img">
+                        </div>
+                        <div class="project-card-title-bar">
+                            <h3>LUXURY SPA PRIMARY SUITE</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="process-section">
+        <div class="container">
+            <h2 class="process-section-title scroll-animate fade-in-up">OUR PROCESS</h2>
+            
+            <div class="process-timeline scroll-animate fade-in-up">
+                <div class="timeline-line"></div>
+                
+                <!-- Step 1 -->
+                <div class="process-step">
+                    <div class="process-icon-circle bg-lavender">
+                        <i class="fa-solid fa-comments"></i>
+                        <span class="process-number">01</span>
+                    </div>
+                    <h3 class="process-step-title">CONSULT</h3>
+                    <p class="process-step-desc">We listen to your ideas and understand your goals.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="process-step">
+                    <div class="process-icon-circle bg-navy">
+                        <i class="fa-solid fa-compass-drafting"></i>
+                        <span class="process-number">02</span>
+                    </div>
+                    <h3 class="process-step-title">PLAN</h3>
+                    <p class="process-step-desc">We design a plan that fits your vision and budget.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="process-step">
+                    <div class="process-icon-circle bg-olive-light">
+                        <i class="fa-solid fa-hammer"></i>
+                        <span class="process-number">03</span>
+                    </div>
+                    <h3 class="process-step-title">BUILD</h3>
+                    <p class="process-step-desc">Our team brings skill and precision to every detail.</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="process-step">
+                    <div class="process-icon-circle bg-warm-grey">
+                        <i class="fa-solid fa-clipboard-list"></i>
+                        <span class="process-number">04</span>
+                    </div>
+                    <h3 class="process-step-title">MANAGE</h3>
+                    <p class="process-step-desc">We manage your project with clear communication and transparency.</p>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="process-step">
+                    <div class="process-icon-circle bg-slate-blue">
+                        <i class="fa-solid fa-house-circle-check"></i>
+                        <span class="process-number">05</span>
+                    </div>
+                    <h3 class="process-step-title">DELIVER</h3>
+                    <p class="process-step-desc">We deliver a space you'll love for years to come.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Area -->
+    <footer id="contact" class="footer">
+        <!-- Angled upper CTA blocks -->
+        <div class="footer-cta-container">
+            <!-- Left CTA Block -->
+            <div class="footer-cta-left">
+                <div class="cta-left-content scroll-animate fade-in-left">
+                    <span class="cta-tag">READY TO START YOUR PROJECT?</span>
+                    <h2 class="cta-heading">Let's build something exceptional together.</h2>
+                    <a href="tel:4247776090" class="btn btn-contact-white">CALL (424) 777-6090 <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Middle Info Block -->
+            <div class="footer-cta-middle scroll-animate fade-in-up">
+                <div class="info-item">
+                    <i class="fa-solid fa-phone info-icon"></i>
+                    <div>
+                        <span class="info-label">CALL US</span>
+                        <a href="tel:4247776090" class="info-value">(424) 777-6090</a>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-envelope info-icon"></i>
+                    <div>
+                        <span class="info-label">EMAIL US</span>
+                        <a href="mailto:info@pacificremodel.us" class="info-value">info@pacificremodel.us</a>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-id-card info-icon"></i>
+                    <div>
+                        <span class="info-label">LICENCE</span>
+                        <span class="info-value">#1111456</span>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-location-dot info-icon"></i>
+                    <div>
+                        <span class="info-label">FIND US</span>
+                        <span class="info-value">927 Westwood Blvd<br>Los Angeles, CA 90024</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Logo Block -->
+            <div class="footer-cta-right scroll-animate fade-in-right">
+                <div class="footer-logo-wrap">
+                    <!-- Img tag with filter invert/brightness in CSS to render as pure white -->
+                    <img src="assets/logo.png" alt="Pacific Remodel and Development logo" class="footer-logo-img">
+                </div>
+                <p class="footer-slogan">Locally Owned & Operated in Pacific Palisades</p>
+                <div class="social-links">
+                    <a href="#" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom bar -->
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <p>&copy; 2026 Pacific Remodel and Development. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Javascript File -->
+    <script src="app.js"></script>
+</body>
+</html>

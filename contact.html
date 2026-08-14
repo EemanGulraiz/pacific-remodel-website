@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us & Request Quote | Pacific Remodel and Development</title>
+    <meta name="description" content="Contact Pacific Remodel and Development for a luxury home construction or remodel consultation in Pacific Palisades & Los Angeles. Call (424) 777-6090.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <!-- Header Navbar -->
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html" class="logo-link">
+                <img src="assets/logo.png" alt="Pacific Remodel and Development" class="logo-img">
+            </a>
+            
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <nav class="nav" id="navMenu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link">HOME</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">ABOUT US</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">SERVICES</a></li>
+                    <li class="nav-item"><a href="projects.html" class="nav-link">PROJECTS</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link active">CONTACT</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-cta">
+                <a href="tel:4247776090" class="btn btn-primary-header">
+                    CALL (424) 777-6090 <i class="fa-solid fa-phone"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Nav Drawer -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay">
+        <ul class="mobile-nav-list">
+            <li><a href="index.html" class="mobile-nav-link">HOME</a></li>
+            <li><a href="about.html" class="mobile-nav-link">ABOUT US</a></li>
+            <li><a href="services.html" class="mobile-nav-link">SERVICES</a></li>
+            <li><a href="projects.html" class="mobile-nav-link">PROJECTS</a></li>
+            <li><a href="contact.html" class="mobile-nav-link active">CONTACT</a></li>
+            <li><a href="tel:4247776090" class="btn btn-primary-mobile">CALL (424) 777-6090 <i class="fa-solid fa-phone"></i></a></li>
+        </ul>
+    </div>
+
+    <!-- Subpage Hero Banner -->
+    <section class="subpage-hero">
+        <div class="subpage-hero-bg hero-bg-contact"></div>
+        <div class="blueprint-grid"></div>
+        <div class="container">
+            <div class="subpage-hero-content fade-in-up">
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span class="breadcrumb-separator"><i class="fa-solid fa-chevron-right"></i></span>
+                    <span>Contact</span>
+                </div>
+                <h1 class="subpage-title">REQUEST A CONSULTATION</h1>
+                <p class="subpage-subtitle">Ready to discuss your high-end luxury single-family home, major remodel, or custom hardscape project? Get in touch with our Pacific Palisades general contracting team.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Form Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Left Column: Quote Form Card -->
+                <div class="contact-form-card scroll-animate fade-in-left">
+                    <span class="section-tag">START YOUR PROJECT</span>
+                    <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--color-navy); margin-bottom: 25px; text-transform: uppercase;">REQUEST A ESTIMATE & SITE VISIT</h2>
+                    
+                    <div class="form-status-alert" id="formStatusAlert"></div>
+
+                    <form id="quoteForm" action="https://api.web3forms.com/submit" method="POST">
+                        <!-- Web3Forms Integration -->
+                        <input type="hidden" name="access_key" id="web3FormsAccessKey" value="a7f0d621-d1c1-4039-910d-677bf0c1e2c4">
+                        <input type="hidden" name="subject" value="New Construction & Remodel Request - Pacific Remodel">
+                        <input type="hidden" name="from_name" value="Pacific Remodel Website">
+                        <input type="hidden" name="replyto" id="replyToEmail" value="info@pacificremodel.us">
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" for="fullName">FULL NAME *</label>
+                                <input type="text" id="fullName" name="name" class="form-control" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="phoneNum">PHONE NUMBER *</label>
+                                <input type="tel" id="phoneNum" name="phone" class="form-control" placeholder="(424) 000-0000" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" for="serviceSelect">SERVICE NEEDED *</label>
+                                <select id="serviceSelect" name="service" class="form-control" required>
+                                    <option value="" disabled selected>Select Service...</option>
+                                    <option value="High-End Luxury Single-Family Home">High-End Luxury Single-Family Home</option>
+                                    <option value="Major Home Remodel & Addition">Major Home Remodel & Addition</option>
+                                    <option value="Gourmet Chef Kitchen">Gourmet Chef Kitchen</option>
+                                    <option value="Spa Master Bathroom Suite">Spa Master Bathroom Suite</option>
+                                    <option value="Outdoor Living & Turf Paver Hardscape">Outdoor Living & Turf Paver Hardscape</option>
+                                    <option value="Other Construction Service">Other Construction Service</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="budgetSelect">ESTIMATED BUDGET</label>
+                                <select id="budgetSelect" name="budget" class="form-control">
+                                    <option value="" disabled selected>Select Budget Range...</option>
+                                    <option value="$100,000 - $250,000">$100,000 - $250,000</option>
+                                    <option value="$250,000 - $500,000">$250,000 - $500,000</option>
+                                    <option value="$500,000 - $1,000,000">$500,000 - $1,000,000</option>
+                                    <option value="$1,000,000+">$1,000,000+</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="timelineSelect">ESTIMATED TIMELINE</label>
+                            <select id="timelineSelect" name="timeline" class="form-control">
+                                <option value="" disabled selected>Select Timeline...</option>
+                                <option value="Immediate / Next 30 Days">Immediate / Next 30 Days</option>
+                                <option value="1 to 3 Months">1 to 3 Months</option>
+                                <option value="3 to 6 Months">3 to 6 Months</option>
+                                <option value="Early Planning Stage">Early Planning Stage</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="projectMsg">PROJECT DETAILS & SCOPE</label>
+                            <textarea id="projectMsg" name="message" class="form-control" placeholder="Describe your project vision, property location, or specific requirements..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-solid-blue" style="width: 100%; border: none; padding: 16px; font-size: 0.95rem; cursor: pointer;">
+                            REQUEST CONSULTATION <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Right Column: Location Map & Info Card -->
+                <div class="scroll-animate fade-in-right">
+                    <div class="map-card">
+                        <!-- Stylized Map Placeholder UI -->
+                        <div class="map-placeholder">
+                            <div class="blueprint-grid" style="opacity: 0.25;"></div>
+                            <div class="map-badge">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <h4>PACIFIC REMODEL & DEVELOPMENT</h4>
+                                <p>927 Westwood Blvd, Los Angeles, CA 90024</p>
+                            </div>
+                        </div>
+
+                        <!-- Info Footer -->
+                        <div class="map-info-footer">
+                            <div class="info-item">
+                                <i class="fa-solid fa-phone info-icon"></i>
+                                <div>
+                                    <span class="info-label">PHONE NUMBER</span>
+                                    <a href="tel:4247776090" class="info-value" style="font-size: 1.1rem; font-weight: 800;">(424) 777-6090</a>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <i class="fa-solid fa-envelope info-icon"></i>
+                                <div>
+                                    <span class="info-label">OFFICIAL EMAIL</span>
+                                    <a href="mailto:info@pacificremodel.us" class="info-value" style="font-size: 1rem; font-weight: 700;">info@pacificremodel.us</a>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <i class="fa-solid fa-id-card info-icon"></i>
+                                <div>
+                                    <span class="info-label">CALIFORNIA CONTRACTOR LICENSE</span>
+                                    <span class="info-value" style="font-size: 1rem; font-weight: 700;">Lic. #1111456 (General Building)</span>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <i class="fa-solid fa-house-user info-icon"></i>
+                                <div>
+                                    <span class="info-label">COMMUNITY COMMITMENT</span>
+                                    <span class="info-value" style="font-size: 0.95rem;">Proud Pacific Palisades Resident for 15+ Years</span>
+                                </div>
+                            </div>
+
+                            <div style="margin-top: 10px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">
+                                <span class="info-label" style="margin-bottom: 10px; display: block;">PRIMARY SERVICE AREAS</span>
+                                <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                                    <span style="background: rgba(93,63,211,0.25); color: var(--color-white); font-size: 0.75rem; font-weight: 700; padding: 6px 14px; border-radius: 20px; border: 1px solid rgba(93,63,211,0.4);">Pacific Palisades</span>
+                                    <span style="background: rgba(255,255,255,0.1); color: var(--color-white); font-size: 0.75rem; font-weight: 700; padding: 6px 14px; border-radius: 20px;">Westwood</span>
+                                    <span style="background: rgba(255,255,255,0.1); color: var(--color-white); font-size: 0.75rem; font-weight: 700; padding: 6px 14px; border-radius: 20px;">Brentwood</span>
+                                    <span style="background: rgba(255,255,255,0.1); color: var(--color-white); font-size: 0.75rem; font-weight: 700; padding: 6px 14px; border-radius: 20px;">Bel-Air</span>
+                                    <span style="background: rgba(255,255,255,0.1); color: var(--color-white); font-size: 0.75rem; font-weight: 700; padding: 6px 14px; border-radius: 20px;">Beverly Hills</span>
+                                    <span style="background: rgba(255,255,255,0.1); color: var(--color-white); font-size: 0.75rem; font-weight: 700; padding: 6px 14px; border-radius: 20px;">Santa Monica</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Area -->
+    <footer id="contact" class="footer">
+        <div class="footer-cta-container">
+            <div class="footer-cta-left">
+                <div class="cta-left-content scroll-animate fade-in-left">
+                    <span class="cta-tag">READY TO START YOUR PROJECT?</span>
+                    <h2 class="cta-heading">Let's build something exceptional together.</h2>
+                    <a href="tel:4247776090" class="btn btn-contact-white">CALL (424) 777-6090 <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-cta-middle scroll-animate fade-in-up">
+                <div class="info-item">
+                    <i class="fa-solid fa-phone info-icon"></i>
+                    <div>
+                        <span class="info-label">CALL US</span>
+                        <a href="tel:4247776090" class="info-value">(424) 777-6090</a>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-envelope info-icon"></i>
+                    <div>
+                        <span class="info-label">EMAIL US</span>
+                        <a href="mailto:info@pacificremodel.us" class="info-value">info@pacificremodel.us</a>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-id-card info-icon"></i>
+                    <div>
+                        <span class="info-label">LICENCE</span>
+                        <span class="info-value">#1111456</span>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-location-dot info-icon"></i>
+                    <div>
+                        <span class="info-label">FIND US</span>
+                        <span class="info-value">927 Westwood Blvd<br>Los Angeles, CA 90024</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-cta-right scroll-animate fade-in-right">
+                <div class="footer-logo-wrap">
+                    <img src="assets/logo.png" alt="Pacific Remodel and Development logo" class="footer-logo-img">
+                </div>
+                <p class="footer-slogan">Locally Owned & Operated in Pacific Palisades</p>
+                <div class="social-links">
+                    <a href="#" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <p>&copy; 2026 Pacific Remodel and Development. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Javascript File -->
+    <script src="app.js"></script>
+</body>
+</html>
