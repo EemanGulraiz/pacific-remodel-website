@@ -2215,13 +2215,6 @@ textarea.form-control {
     .story-highlights-grid {
         grid-template-columns: 1fr;
     }
-
-    .stats-ribbon-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .ribbon-stat-item {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 }
 
