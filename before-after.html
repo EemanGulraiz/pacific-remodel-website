@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before & After Transformations | Pacific Remodel & Development</title>
+    <meta name="description" content="Explore before and after transformations of luxury home builds, major remodels, gourmet kitchens, and spa bath suites in Pacific Palisades & Los Angeles.">
+    <link rel="canonical" href="https://pacificremodel.us/before-after.html">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pacificremodel.us/before-after.html">
+    <meta property="og:title" content="Before & After Transformations | Pacific Remodel & Development">
+    <meta property="og:description" content="Explore before and after transformations of luxury home builds, major remodels, gourmet kitchens, and spa bath suites in Pacific Palisades & Los Angeles.">
+    <meta property="og:image" content="https://pacificremodel.us/assets/homepage_share_preview.png">
+    <meta property="og:site_name" content="Pacific Remodel and Development">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://pacificremodel.us/before-after.html">
+    <meta name="twitter:title" content="Before & After Transformations | Pacific Remodel & Development">
+    <meta name="twitter:description" content="Explore before and after transformations of luxury home builds, major remodels, gourmet kitchens, and spa bath suites in Pacific Palisades & Los Angeles.">
+    <meta name="twitter:image" content="https://pacificremodel.us/assets/homepage_share_preview.png">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="index.css">
+    <style>
+        /* Specific Styles for Before & After Page Mockup */
+        .ba-hero-section {
+            background-color: var(--color-navy);
+            color: var(--color-white);
+            padding: 90px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+        .ba-hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        @media (max-width: 992px) {
+            .ba-hero-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+        .ba-hero-tag {
+            color: #60a5fa;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            display: block;
+        }
+        .ba-hero-title {
+            font-family: 'Cinzel', serif;
+            font-size: 3.2rem;
+            font-weight: 700;
+            line-height: 1.15;
+            color: var(--color-white);
+            margin-bottom: 25px;
+        }
+        .ba-hero-title span {
+            color: #60a5fa;
+        }
+        .ba-hero-desc {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.05rem;
+            line-height: 1.7;
+            margin-bottom: 35px;
+            max-width: 520px;
+        }
+        .btn-light-blue {
+            background-color: #38bdf8;
+            color: #0f172a;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            padding: 14px 28px;
+            border-radius: 6px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+        }
+        .btn-light-blue:hover {
+            background-color: #0284c7;
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(56, 189, 248, 0.3);
+        }
+
+        /* Interactive Comparison Slider Widget */
+        .ba-slider-widget {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            user-select: none;
+            background: #000;
+        }
+        @media (max-width: 576px) {
+            .ba-slider-widget { height: 280px; }
+        }
+        .ba-slider-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+        .ba-slider-before {
+            width: 50%;
+            z-index: 1;
+            overflow: hidden;
+            border-right: 2px solid #ffffff;
+        }
+        .ba-slider-before .ba-img-inner {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+        .ba-handle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 44px;
+            height: 44px;
+            background: #0f172a;
+            border: 2px solid #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-size: 0.9rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+            cursor: ew-resize;
+            z-index: 10;
+        }
+        .ba-slider-badge {
+            position: absolute;
+            top: 15px;
+            padding: 6px 14px;
+            border-radius: 4px;
+            font-family: var(--font-heading);
+            font-weight: 800;
+            font-size: 0.75rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #ffffff;
+            z-index: 5;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+        .ba-slider-badge-before {
+            left: 15px;
+            background: rgba(15, 23, 42, 0.85);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .ba-slider-badge-after {
+            right: 15px;
+            background: #38bdf8;
+            color: #0f172a;
+        }
+
+        /* 3-Column Split Card Grid Section */
+        .ba-cards-section {
+            padding: 90px 0;
+            background-color: var(--color-bg-sand);
+        }
+        .ba-split-card-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 45px;
+        }
+        @media (max-width: 992px) {
+            .ba-split-card-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 768px) {
+            .ba-split-card-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .ba-split-card {
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        .ba-split-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+        }
+        .ba-split-img-container {
+            display: flex;
+            height: 220px;
+            position: relative;
+            overflow: hidden;
+        }
+        .ba-split-img-half {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+        }
+        .ba-split-img-half img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .ba-split-card:hover .ba-split-img-half img {
+            transform: scale(1.06);
+        }
+        .ba-split-badge {
+            position: absolute;
+            top: 10px;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-family: var(--font-heading);
+            font-weight: 800;
+            font-size: 0.65rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #ffffff;
+            z-index: 2;
+        }
+        .ba-split-badge-before { left: 10px; background: rgba(15, 23, 42, 0.85); }
+        .ba-split-badge-after { right: 10px; background: #0284c7; }
+        .ba-split-divider {
+            width: 2px;
+            background: #ffffff;
+            z-index: 3;
+        }
+        .ba-split-card-content {
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        .ba-split-card-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--color-navy);
+            margin-bottom: 6px;
+        }
+        .ba-split-card-subtitle {
+            font-size: 0.9rem;
+            color: var(--color-muted-text);
+            margin-bottom: 18px;
+        }
+        .ba-split-card-meta {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 0.8rem;
+            color: var(--color-slate-blue);
+            font-weight: 600;
+            padding-top: 15px;
+            border-top: 1px solid rgba(0,0,0,0.06);
+            margin-top: auto;
+            margin-bottom: 15px;
+        }
+        .ba-split-card-link {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            color: var(--color-navy);
+            text-transform: uppercase;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: color 0.2s ease;
+        }
+        .ba-split-card-link:hover { color: var(--color-slate-blue); }
+
+        /* Featured Single Project Showcase Section */
+        .ba-featured-section {
+            background-color: var(--color-navy);
+            color: #ffffff;
+            padding: 90px 0;
+        }
+        .ba-featured-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        @media (max-width: 992px) {
+            .ba-featured-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+        .ba-specs-list {
+            margin: 25px 0 30px;
+        }
+        .ba-spec-item {
+            display: grid;
+            grid-template-columns: 140px 1fr;
+            gap: 15px;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.95rem;
+        }
+        .ba-spec-label {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            color: #60a5fa;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .ba-spec-val {
+            color: rgba(255,255,255,0.85);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navbar -->
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html" class="logo-link">
+                <img src="assets/logo.png" alt="Pacific Remodel and Development" class="logo-img">
+            </a>
+            
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <nav class="nav" id="navMenu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link">HOME</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">ABOUT US</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">SERVICES</a></li>
+                    <li class="nav-item"><a href="projects.html" class="nav-link">PROJECTS</a></li>
+                    <li class="nav-item"><a href="before-after.html" class="nav-link active">BEFORE & AFTER</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">CONTACT</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-cta">
+                <a href="contact.html" class="btn-light-blue">
+                    GET A QUOTE <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Nav Drawer (Overlay) -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay">
+        <ul class="mobile-nav-list">
+            <li><a href="index.html" class="mobile-nav-link">HOME</a></li>
+            <li><a href="about.html" class="mobile-nav-link">ABOUT US</a></li>
+            <li><a href="services.html" class="mobile-nav-link">SERVICES</a></li>
+            <li><a href="projects.html" class="mobile-nav-link">PROJECTS</a></li>
+            <li><a href="before-after.html" class="mobile-nav-link active">BEFORE & AFTER</a></li>
+            <li><a href="contact.html" class="mobile-nav-link">CONTACT</a></li>
+            <li><a href="contact.html" class="btn btn-primary-mobile">GET A QUOTE <i class="fa-solid fa-arrow-right"></i></a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="ba-hero-section">
+        <div class="container">
+            <div class="ba-hero-grid">
+                <!-- Left Text Content -->
+                <div class="scroll-animate fade-in-left">
+                    <span class="ba-hero-tag">PROJECT TRANSFORMATIONS</span>
+                    <h1 class="ba-hero-title">FROM BEFORE TO <span>EXCEPTIONAL</span></h1>
+                    <p class="ba-hero-desc">
+                        We turn outdated, damaged, and unused spaces into beautiful, functional, and lasting homes. From demolition to refined luxury — see the real transformation.
+                    </p>
+                    <a href="contact.html" class="btn-light-blue">
+                        START YOUR PROJECT <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Right Interactive Comparison Slider -->
+                <div class="scroll-animate fade-in-right">
+                    <div class="ba-slider-widget" id="heroBaSlider">
+                        <div class="ba-slider-badge ba-slider-badge-before">BEFORE</div>
+                        <div class="ba-slider-badge ba-slider-badge-after">AFTER</div>
+                        <!-- After Image Background -->
+                        <div class="ba-slider-img" style="background-image: url('assets/viaynez-after-6.jpg');"></div>
+                        <!-- Before Image Overlay Clip -->
+                        <div class="ba-slider-before" id="heroBeforeClip" style="width: 50%;">
+                            <div class="ba-img-inner" style="background-image: url('assets/viaynez-before-bathroom.jpg'); width: 100%;"></div>
+                        </div>
+                        <!-- Drag Handle -->
+                        <div class="ba-handle" id="heroBaHandle" style="left: 50%;">
+                            <i class="fa-solid fa-code-compare"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3-Column Split Cards Section -->
+    <section class="ba-cards-section">
+        <div class="container">
+            <div class="text-center scroll-animate fade-in-up" style="text-align: center; max-width: 750px; margin: 0 auto;">
+                <span class="section-tag">OUR PROJECTS</span>
+                <h2 class="section-title" style="font-family: 'Cinzel', serif;">REAL SPACES. REMARKABLE CHANGES.</h2>
+                <p class="section-desc">
+                    Every project tells a story — of vision, craftsmanship, and transformation. Here are some of our recent before and after remodels in Pacific Palisades and surrounding areas.
+                </p>
+            </div>
+
+            <div class="ba-split-card-grid">
+                <!-- Card 1: Bathroom Transformation -->
+                <div class="ba-split-card scroll-animate fade-in-up">
+                    <div class="ba-split-img-container">
+                        <div class="ba-split-badge ba-split-badge-before">BEFORE</div>
+                        <div class="ba-split-badge ba-split-badge-after">AFTER</div>
+                        <div class="ba-split-img-half">
+                            <img src="assets/viaynez-before-bathroom.jpg" alt="Bathroom Before">
+                        </div>
+                        <div class="ba-split-divider"></div>
+                        <div class="ba-split-img-half">
+                            <img src="assets/viaynez-after-6.jpg" alt="Bathroom After">
+                        </div>
+                    </div>
+                    <div class="ba-split-card-content">
+                        <h3 class="ba-split-card-title">Bathroom Transformation</h3>
+                        <p class="ba-split-card-subtitle">Modern comfort. Timeless style.</p>
+                        <div class="ba-split-card-meta">
+                            <span><i class="fa-solid fa-briefcase"></i> Bathroom Remodel</span>
+                            <span><i class="fa-solid fa-location-dot"></i> Pacific Palisades</span>
+                        </div>
+                        <a href="project-viaynez.html" class="ba-split-card-link">VIEW PROJECT <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Card 2: Roof & Exterior Renewal -->
+                <div class="ba-split-card scroll-animate fade-in-up" style="animation-delay: 0.15s;">
+                    <div class="ba-split-img-container">
+                        <div class="ba-split-badge ba-split-badge-before">BEFORE</div>
+                        <div class="ba-split-badge ba-split-badge-after">AFTER</div>
+                        <div class="ba-split-img-half">
+                            <img src="assets/viaynez-before-exterior.jpg" alt="Exterior Before">
+                        </div>
+                        <div class="ba-split-divider"></div>
+                        <div class="ba-split-img-half">
+                            <img src="assets/viaynez-after-1.jpg" alt="Exterior After">
+                        </div>
+                    </div>
+                    <div class="ba-split-card-content">
+                        <h3 class="ba-split-card-title">Roof & Exterior Renewal</h3>
+                        <p class="ba-split-card-subtitle">Better protection. A lasting first impression.</p>
+                        <div class="ba-split-card-meta">
+                            <span><i class="fa-solid fa-briefcase"></i> Roofing & Exterior</span>
+                            <span><i class="fa-solid fa-location-dot"></i> Pacific Palisades</span>
+                        </div>
+                        <a href="project-viaynez.html" class="ba-split-card-link">VIEW PROJECT <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Card 3: Whole-Home Remodel -->
+                <div class="ba-split-card scroll-animate fade-in-up" style="animation-delay: 0.3s;">
+                    <div class="ba-split-img-container">
+                        <div class="ba-split-badge ba-split-badge-before">BEFORE</div>
+                        <div class="ba-split-badge ba-split-badge-after">AFTER</div>
+                        <div class="ba-split-img-half">
+                            <img src="assets/viaynez-before-framing.jpg" alt="Framing Before">
+                        </div>
+                        <div class="ba-split-divider"></div>
+                        <div class="ba-split-img-half">
+                            <img src="assets/viaynez-after-3.jpg" alt="Vaulted Living After">
+                        </div>
+                    </div>
+                    <div class="ba-split-card-content">
+                        <h3 class="ba-split-card-title">Whole-Home Remodel</h3>
+                        <p class="ba-split-card-subtitle">From outdated to extraordinary.</p>
+                        <div class="ba-split-card-meta">
+                            <span><i class="fa-solid fa-briefcase"></i> Full Home Remodel</span>
+                            <span><i class="fa-solid fa-location-dot"></i> Pacific Palisades</span>
+                        </div>
+                        <a href="project-viaynez.html" class="ba-split-card-link">VIEW PROJECT <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Single Project Showcase Section -->
+    <section class="ba-featured-section">
+        <div class="container">
+            <div class="ba-featured-grid">
+                <!-- Left Interactive Slider Widget -->
+                <div class="scroll-animate fade-in-left">
+                    <div class="ba-slider-widget" id="featuredBaSlider" style="height: 420px;">
+                        <div class="ba-slider-badge ba-slider-badge-before">BEFORE</div>
+                        <div class="ba-slider-badge ba-slider-badge-after">AFTER</div>
+                        <div class="ba-slider-img" style="background-image: url('assets/viaynez-after-6.jpg');"></div>
+                        <div class="ba-slider-before" id="featuredBeforeClip" style="width: 50%;">
+                            <div class="ba-img-inner" style="background-image: url('assets/viaynez-before-bathroom.jpg'); width: 100%;"></div>
+                        </div>
+                        <div class="ba-handle" id="featuredBaHandle" style="left: 50%;">
+                            <i class="fa-solid fa-code-compare"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Featured Specs -->
+                <div class="scroll-animate fade-in-right">
+                    <span class="ba-hero-tag">FEATURED PROJECT</span>
+                    <h2 class="ba-hero-title" style="font-size: 2.5rem; margin-bottom: 15px;">THE TRANSFORMATION</h2>
+                    
+                    <div class="ba-specs-list">
+                        <div class="ba-spec-item">
+                            <span class="ba-spec-label"><i class="fa-solid fa-ruler-combined"></i> Project Type</span>
+                            <span class="ba-spec-val">Bathroom & Spa Suite Remodel</span>
+                        </div>
+                        <div class="ba-spec-item">
+                            <span class="ba-spec-label"><i class="fa-solid fa-location-dot"></i> Location</span>
+                            <span class="ba-spec-val">Pacific Palisades, CA 90265</span>
+                        </div>
+                        <div class="ba-spec-item">
+                            <span class="ba-spec-label"><i class="fa-solid fa-layer-group"></i> Scope</span>
+                            <span class="ba-spec-val">Demolition, structural changes, plumbing, electrical, custom stone finishes</span>
+                        </div>
+                    </div>
+
+                    <p style="color: rgba(255,255,255,0.8); line-height: 1.7; font-size: 0.95rem;">
+                        What was once an outdated and damaged bathroom was completely reimagined into a modern, luxurious space with high-end finishes, a spacious layout, and elegant details.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Let's Build Something Better CTA Banner -->
+    <section style="padding: 100px 0; background: linear-gradient(180deg, #0f172a 0%, #0284c7 100%); color: #ffffff; text-align: center;">
+        <div class="container" style="max-width: 800px;">
+            <span class="ba-hero-tag" style="color: #38bdf8;">LET'S BUILD SOMETHING BETTER</span>
+            <h2 style="font-family: 'Cinzel', serif; font-size: 2.8rem; margin-bottom: 20px;">Ready to transform your space?</h2>
+            <p style="font-size: 1.1rem; color: rgba(255,255,255,0.85); margin-bottom: 35px; line-height: 1.6;">
+                Whether it's a small update or a full remodel, we're here to bring your vision to life.
+            </p>
+            <a href="contact.html" class="btn-light-blue" style="font-size: 0.95rem; padding: 16px 36px;">
+                GET A QUOTE <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer Area -->
+    <footer id="contact" class="footer">
+        <div class="footer-cta-container">
+            <div class="footer-cta-left">
+                <div class="cta-left-content scroll-animate fade-in-left">
+                    <span class="cta-tag">READY TO START YOUR PROJECT?</span>
+                    <h2 class="cta-heading">Let's build something exceptional together.</h2>
+                    <a href="tel:4247776090" class="btn btn-contact-white">CALL (424) 777-6090 <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="footer-cta-middle scroll-animate fade-in-up">
+                <div class="info-item"><i class="fa-solid fa-phone info-icon"></i><div><span class="info-label">CALL US</span><a href="tel:4247776090" class="info-value">(424) 777-6090</a></div></div>
+                <div class="info-item"><i class="fa-solid fa-envelope info-icon"></i><div><span class="info-label">EMAIL US</span><a href="mailto:info@pacificremodel.us" class="info-value">info@pacificremodel.us</a></div></div>
+                <div class="info-item"><i class="fa-solid fa-id-card info-icon"></i><div><span class="info-label">LICENCE</span><span class="info-value">#1111456</span></div></div>
+                <div class="info-item"><i class="fa-solid fa-location-dot info-icon"></i><div><span class="info-label">FIND US</span><span class="info-value">1215 Lachman Lane<br>Pacific Palisades, CA 90272</span></div></div>
+            </div>
+            <div class="footer-cta-right scroll-animate fade-in-right">
+                <div class="footer-logo-wrap"><img src="assets/logo.png" alt="Pacific Remodel and Development logo" class="footer-logo-img"></div>
+                <p class="footer-slogan">Locally Owned & Operated in Pacific Palisades</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-flex">
+                <p class="copyright">&copy; 2026 Pacific Remodel and Development. All Rights Reserved.</p>
+                <div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a><a href="#">Lic. #1111456</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script>
+        // Interactive Slider Drag Logic
+        function setupSlider(widgetId, clipId, handleId) {
+            const widget = document.getElementById(widgetId);
+            const clip = document.getElementById(clipId);
+            const handle = document.getElementById(handleId);
+            if (!widget || !clip || !handle) return;
+
+            let isDragging = false;
+
+            function updatePosition(x) {
+                const rect = widget.getBoundingClientRect();
+                let pct = ((x - rect.left) / rect.width) * 100;
+                pct = Math.max(0, Math.min(100, pct));
+                clip.style.width = pct + '%';
+                handle.style.left = pct + '%';
+            }
+
+            widget.addEventListener('mousedown', (e) => { isDragging = true; updatePosition(e.clientX); });
+            window.addEventListener('mouseup', () => { isDragging = false; });
+            window.addEventListener('mousemove', (e) => { if (isDragging) updatePosition(e.clientX); });
+
+            widget.addEventListener('touchstart', (e) => { isDragging = true; updatePosition(e.touches[0].clientX); });
+            window.addEventListener('touchend', () => { isDragging = false; });
+            window.addEventListener('touchmove', (e) => { if (isDragging) updatePosition(e.touches[0].clientX); });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            setupSlider('heroBaSlider', 'heroBeforeClip', 'heroBaHandle');
+            setupSlider('featuredBaSlider', 'featuredBeforeClip', 'featuredBaHandle');
+        });
+    </script>
+</body>
+</html>
