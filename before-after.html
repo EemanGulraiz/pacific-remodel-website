@@ -120,6 +120,10 @@
             background-position: center;
         }
         .ba-slider-before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
             width: 50%;
             z-index: 1;
             overflow: hidden;
@@ -607,6 +611,17 @@
             const clip = document.getElementById(clipId);
             const handle = document.getElementById(handleId);
             if (!widget || !clip || !handle) return;
+
+            const inner = clip.querySelector('.ba-img-inner');
+
+            function syncWidth() {
+                if (inner) {
+                    inner.style.width = widget.offsetWidth + 'px';
+                }
+            }
+
+            syncWidth();
+            window.addEventListener('resize', syncWidth);
 
             let isDragging = false;
 
