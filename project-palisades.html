@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>452 Bundy Modern Estate | Project Case Study | Pacific Remodel & Development</title>
     <meta name="description" content="Case study of 452 Bundy Modern Estate in Pacific Palisades: Whole-home luxury remodel, concrete/turf grid driveway, gourmet kitchen, & vaulted living quarters.">
-<!-- Google Fonts -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -29,9 +29,7 @@
             border-bottom: 1px solid var(--color-bg-sand);
             font-size: 0.95rem;
         }
-        .meta-item:last-child {
-            border-bottom: none;
-        }
+        .meta-item:last-child { border-bottom: none; }
         .meta-label {
             font-family: var(--font-heading);
             font-weight: 700;
@@ -40,11 +38,7 @@
             font-size: 0.85rem;
             letter-spacing: 0.5px;
         }
-        .meta-value {
-            color: var(--color-muted-text);
-            font-weight: 600;
-            text-align: right;
-        }
+        .meta-value { color: var(--color-muted-text); font-weight: 600; text-align: right; }
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -65,19 +59,108 @@
             object-fit: cover;
             transition: transform 0.5s ease;
         }
-        .gallery-card:hover img {
-            transform: scale(1.08);
+        .gallery-card:hover img { transform: scale(1.08); }
+        .gallery-badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-family: var(--font-heading);
+            font-weight: 800;
+            font-size: 0.65rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #fff;
+            z-index: 2;
         }
-        @media (max-width: 992px) {
-            .gallery-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
+        .badge-before { background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(255,255,255,0.2); }
+        .badge-after { background: #0284c7; }
+        @media (max-width: 992px) { .gallery-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 600px) { .gallery-grid { grid-template-columns: 1fr; } }
+    </style>
+    <!-- Bulletproof Before & After Component Styles -->
+    <style>
+    .before-after-grid {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 30px !important;
+        margin-top: 20px !important;
+        align-items: stretch !important;
+    }
+    .before-after-grid .ba-card {
+        flex: 1 1 calc(50% - 15px) !important;
+        min-width: 280px !important;
+        box-sizing: border-box !important;
+        display: flex !important;
+        flex-direction: column !important;
+        border-radius: 12px !important;
+        overflow: hidden !important;
+        background: #ffffff !important;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.08) !important;
+        border: 1px solid rgba(0,0,0,0.06) !important;
+    }
+    .before-after-grid .ba-img-wrap {
+        width: 100% !important;
+        height: 300px !important;
+        max-height: 300px !important;
+        position: relative !important;
+        overflow: hidden !important;
+        background: #0f172a !important;
+    }
+    .before-after-grid .ba-img-wrap img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: center !important;
+        display: block !important;
+    }
+    .before-after-grid .ba-badge {
+        position: absolute !important;
+        top: 15px !important;
+        left: 15px !important;
+        padding: 6px 14px !important;
+        border-radius: 4px !important;
+        font-family: var(--font-heading), sans-serif !important;
+        font-weight: 800 !important;
+        font-size: 0.75rem !important;
+        letter-spacing: 1.2px !important;
+        text-transform: uppercase !important;
+        color: #ffffff !important;
+        z-index: 5 !important;
+    }
+    .before-after-grid .ba-badge-before {
+        background: #0f172a !important;
+        border: 1px solid rgba(255,255,255,0.25) !important;
+    }
+    .before-after-grid .ba-badge-after {
+        background: #0284c7 !important;
+        color: #ffffff !important;
+    }
+    .before-after-grid .ba-caption {
+        padding: 20px 24px !important;
+        background: #ffffff !important;
+        display: flex !important;
+        flex-direction: column !important;
+        flex-grow: 1 !important;
+    }
+    .before-after-grid .ba-title {
+        font-family: var(--font-heading) !important;
+        font-size: 1.1rem !important;
+        font-weight: 700 !important;
+        color: var(--color-navy) !important;
+        margin-bottom: 6px !important;
+    }
+    .before-after-grid .ba-desc {
+        font-size: 0.9rem !important;
+        color: var(--color-muted-text) !important;
+        line-height: 1.5 !important;
+    }
+    @media (max-width: 768px) {
+        .before-after-grid .ba-card {
+            flex: 1 1 100% !important;
         }
-        @media (max-width: 600px) {
-            .gallery-grid {
-                grid-template-columns: 1fr;
-            }
-        }
+    }
     </style>
     <!-- Canonical URL -->
     <link rel="canonical" href="https://pacificremodel.us/project-palisades.html">
@@ -103,7 +186,7 @@
     <header class="header">
         <div class="header-container">
             <a href="index.html" class="logo-link">
-                <img src="assets/logo.png" alt="Pacific Remodel and Development" class="logo-img">
+                <img src="assets/logo.webp" alt="Pacific Remodel and Development" class="logo-img" width="180" height="52" fetchpriority="high" decoding="async">
             </a>
             
             <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">
@@ -234,6 +317,115 @@
                     </div>
                 </div>
             </div>
+
+            <!-- BEFORE & AFTER TRANSFORMATION COMPARISONS -->
+            <div style="margin-top: 70px;" class="scroll-animate fade-in-up">
+                <div class="text-center" style="text-align: center; max-width: 750px; margin: 0 auto 40px;">
+                    <span class="section-tag">BEFORE & AFTER TRANSFORMATION</span>
+                    <h2 class="section-title">452 BUNDY REMODEL COMPARISON</h2>
+                    <p class="section-desc">Compare original property conditions, traditional entryway gates, enclosed ceilings, and dated bathrooms against the completed flagship estate by Pacific Remodel and Development.</p>
+                </div>
+
+                <!-- Pair 1: Front Gate & Concrete/Turf Driveway -->
+                <h3 style="font-size: 1.2rem; font-weight: 800; color: var(--color-navy); margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.5px;"><i class="fa-solid fa-torii-gate" style="color: var(--color-slate-blue);"></i> 1. FRONT SECURITY GATE & DRIVEWAY HARDSCAPE</h3>
+                <div class="before-after-grid" style="margin-top: 0; margin-bottom: 50px;">
+                    <div class="ba-card">
+                        <span class="ba-badge ba-badge-before">BEFORE • ORIGINAL FRONT</span>
+                        <div class="ba-img-wrap">
+                            <img src="assets/bundy-before-1.webp" alt="Original Front Gate Before" class="lightbox-trigger" data-caption="452 S Bundy Dr - Original Traditional Driveway & Security Gate Entrance" width="1080" height="720" loading="lazy" decoding="async">
+                        </div>
+                        <div class="ba-caption">
+                            <h4 class="ba-title">Original Front Driveway & Gate</h4>
+                            <p class="ba-desc">Traditional concrete asphalt driveway, standard security gate, and enclosed front facade perimeter.</p>
+                        </div>
+                    </div>
+                    <div class="ba-card">
+                        <span class="ba-badge ba-badge-after">AFTER • CONCRETE & TURF GRID</span>
+                        <div class="ba-img-wrap">
+                            <img src="assets/palisades-front-gate.webp" alt="Completed Modern Gated Entrance After" class="lightbox-trigger" data-caption="452 S Bundy Dr - Completed Modern Concrete Paver Grid with Synthetic Turf Inlay & Frosted Glass Security Gate" width="600" height="373" loading="lazy" decoding="async">
+                        </div>
+                        <div class="ba-caption">
+                            <h4 class="ba-title">Modern Concrete-Turf Grid Driveway</h4>
+                            <p class="ba-desc">Architectural concrete paver grid with lush synthetic turf inlay, motorized frosted glass security gate, and modern exterior perimeter.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pair 2: Vaulted Living Room & Fireplace -->
+                <h3 style="font-size: 1.2rem; font-weight: 800; color: var(--color-navy); margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.5px;"><i class="fa-solid fa-couch" style="color: var(--color-slate-blue);"></i> 2. VAULTED LIVING ROOM & TRANSOM GLASS</h3>
+                <div class="before-after-grid" style="margin-top: 0; margin-bottom: 50px;">
+                    <div class="ba-card">
+                        <span class="ba-badge ba-badge-before">BEFORE • ORIGINAL LIVING</span>
+                        <div class="ba-img-wrap">
+                            <img src="assets/bundy-before-living-exact.webp" alt="Original Living Room Before" class="lightbox-trigger" data-caption="452 S Bundy Dr - Original Living Room with Enclosed Flat Ceilings" width="1132" height="720" loading="lazy" decoding="async">
+                        </div>
+                        <div class="ba-caption">
+                            <h4 class="ba-title">Original Living Quarters</h4>
+                            <p class="ba-desc">Standard flat ceilings, enclosed layout, traditional fireplace hearth, and limited natural window light.</p>
+                        </div>
+                    </div>
+                    <div class="ba-card">
+                        <span class="ba-badge ba-badge-after">AFTER • VAULTED LIVING SUITE</span>
+                        <div class="ba-img-wrap">
+                            <img src="assets/palisades-living-room.webp" alt="Completed Vaulted Living Room After" class="lightbox-trigger" data-caption="452 S Bundy Dr - Vaulted Living Room with High Triangular Transom Glazing & Exposed Ceiling Beams" width="600" height="400" loading="lazy" decoding="async">
+                        </div>
+                        <div class="ba-caption">
+                            <h4 class="ba-title">Vaulted Living Room & Transom Glazing</h4>
+                            <p class="ba-desc">Dramatic vaulted ceilings, high triangular transom windows, exposed wooden beams, and open indoor-outdoor flow.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pair 3: Gourmet Marble Kitchen Suite -->
+                <h3 style="font-size: 1.2rem; font-weight: 800; color: var(--color-navy); margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.5px;"><i class="fa-solid fa-kitchen-set" style="color: var(--color-slate-blue);"></i> 3. GOURMET MARBLE KITCHEN OVERHAUL</h3>
+                <div class="before-after-grid" style="margin-top: 0; margin-bottom: 50px;">
+                    <div class="ba-card">
+                        <span class="ba-badge ba-badge-before">BEFORE • ORIGINAL KITCHEN</span>
+                        <div class="ba-img-wrap">
+                            <img src="assets/bundy-before-13.webp" alt="Original Kitchen Before" class="lightbox-trigger" data-caption="452 S Bundy Dr - Original Kitchen Layout Prior to Remodel" width="1080" height="720" loading="lazy" decoding="async">
+                        </div>
+                        <div class="ba-caption">
+                            <h4 class="ba-title">Original Traditional Kitchen</h4>
+                            <p class="ba-desc">Dated wood cabinetry, cramped island layout, traditional appliances, and low soffit ceilings.</p>
+                        </div>
+                    </div>
+                    <div class="ba-card">
+                        <span class="ba-badge ba-badge-after">AFTER • MARBLE WATERFALL KITCHEN</span>
+                        <div class="ba-img-wrap">
+                            <img src="assets/palisades-gourmet-kitchen.webp" alt="Completed Marble Gourmet Kitchen After" class="lightbox-trigger" data-caption="452 S Bundy Dr - Gourmet Kitchen with Marble Waterfall Island & Rift Oak Millwork" width="600" height="401" loading="lazy" decoding="async">
+                        </div>
+                        <div class="ba-caption">
+                            <h4 class="ba-title">Marble Waterfall Chef Kitchen</h4>
+                            <p class="ba-desc">Book-matched marble waterfall island, rift oak millwork cabinetry, integrated Thermador appliances, and designer pendant lights.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pair 4: Primary Spa Bathroom Suite -->
+                <h3 style="font-size: 1.2rem; font-weight: 800; color: var(--color-navy); margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.5px;"><i class="fa-solid fa-bath" style="color: var(--color-slate-blue);"></i> 4. PRIMARY SPA BATHROOM SANCTUARY</h3>
+                <div class="before-after-grid" style="margin-top: 0; margin-bottom: 50px;">
+                    <div class="ba-card">
+                        <span class="ba-badge ba-badge-before">BEFORE • ORIGINAL BATH</span>
+                        <div class="ba-img-wrap">
+                            <img src="assets/bundy-before-bath-exact.webp" alt="Original Bathroom Before" class="lightbox-trigger" data-caption="452 S Bundy Dr - Original Primary Bathroom Vanity & Tile Tub Enclosure" width="1080" height="720" loading="lazy" decoding="async">
+                        </div>
+                        <div class="ba-caption">
+                            <h4 class="ba-title">Original Primary Bathroom</h4>
+                            <p class="ba-desc">Aged vanity cabinets, traditional tile surround, drop-in bathtub, and enclosed shower stall.</p>
+                        </div>
+                    </div>
+                    <div class="ba-card">
+                        <span class="ba-badge ba-badge-after">AFTER • SPA BATHROOM SANCTUARY</span>
+                        <div class="ba-img-wrap">
+                            <img src="assets/palisades-luxury-bathroom.webp" alt="Completed Luxury Spa Bathroom After" class="lightbox-trigger" data-caption="452 S Bundy Dr - Luxury Spa Bathroom with Carved Marble Vanity & Frameless Shower" width="400" height="600" loading="lazy" decoding="async">
+                        </div>
+                        <div class="ba-caption">
+                            <h4 class="ba-title">Custom Carved Marble Spa Sanctuary</h4>
+                            <p class="ba-desc">Carved light marble slab vanity countertop, frameless glass rain shower, freestanding soak tub, and backlit LED niches.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -242,72 +434,159 @@
         <div class="container">
             <div class="text-center scroll-animate fade-in-up" style="text-align: center; max-width: 700px; margin: 0 auto;">
                 <span class="section-tag">REAL PROJECT PHOTOGRAPHY</span>
-                <h2 class="section-title">HIGH-RESOLUTION PHOTO GALLERY</h2>
-                <p class="section-desc">Click any photo below to inspect high-definition details of the 452 Pacific Palisades Modern Estate build.</p>
+                <h2 class="section-title">452 BUNDY COMPLETE PHOTO GALLERY</h2>
+                <p class="section-desc">Click any photo below to inspect high-definition details of original conditions and the completed 452 Pacific Palisades Modern Estate build.</p>
             </div>
 
             <div class="gallery-grid scroll-animate fade-in-up">
-                <!-- Photo 1: Front Gated Security Entrance -->
-                <div class="gallery-card lightbox-trigger" data-src="assets/452-bundy-gate.jpg" data-caption="452 Bundy - Gated Driveway Entrance with Address Marker 452, Frosted Glass Gate & Turf Grid Pavers">
-                    <img src="assets/452-bundy-gate.jpg" alt="452 Bundy Front Gated Driveway Entrance">
-                    <div class="portfolio-overlay">
-                        <span class="portfolio-action-btn"><i class="fa-solid fa-expand"></i></span>
-                    </div>
+                <!-- Completed After Photos -->
+                <div class="gallery-card">
+                    <span class="gallery-badge badge-after">AFTER</span>
+                    <img src="assets/palisades-front-gate.webp" alt="Front Security Entrance" class="lightbox-trigger" data-caption="452 Bundy - Modern Security Gate Entrance & Concrete Paver Grid Lawn" width="600" height="373" loading="lazy" decoding="async">
+                </div>
+                <div class="gallery-card">
+                    <span class="gallery-badge badge-after">AFTER</span>
+                    <img src="assets/palisades-living-room.webp" alt="Vaulted Living Room" class="lightbox-trigger" data-caption="452 Bundy - Open-Concept Vaulted Living Room with High Transom Glazing & Wooden Beams" width="600" height="400" loading="lazy" decoding="async">
+                </div>
+                <div class="gallery-card">
+                    <span class="gallery-badge badge-after">AFTER</span>
+                    <img src="assets/palisades-gourmet-kitchen.webp" alt="Gourmet Kitchen Suite" class="lightbox-trigger" data-caption="452 Bundy - Gourmet Marble Waterfall Island Kitchen with Rift Oak Cabinetry" width="600" height="401" loading="lazy" decoding="async">
+                </div>
+                <div class="gallery-card">
+                    <span class="gallery-badge badge-after">AFTER</span>
+                    <img src="assets/palisades-luxury-bathroom.webp" alt="Luxury Spa Bathroom" class="lightbox-trigger" data-caption="452 Bundy - Primary Spa Bathroom with Carved Marble Vanity & Frameless Shower" width="400" height="600" loading="lazy" decoding="async">
+                </div>
+                <div class="gallery-card">
+                    <span class="gallery-badge badge-after">AFTER</span>
+                    <img src="assets/palisades-rear-exterior.webp" alt="Rear Patio Grounds" class="lightbox-trigger" data-caption="452 Bundy - Rear Exterior Patio, Lawn & Covered Architectural Pergola" width="1024" height="653" loading="lazy" decoding="async">
                 </div>
 
-                <!-- Photo 2: Light Oak Gourmet Kitchen -->
-                <div class="gallery-card lightbox-trigger" data-src="assets/452-bundy-kitchen.jpg" data-caption="452 Bundy - Gourmet Kitchen with Light Oak Cabinets, Marble Waterfall Island & Barstools">
-                    <img src="assets/452-bundy-kitchen.jpg" alt="452 Bundy Gourmet Kitchen Suite">
-                    <div class="portfolio-overlay">
-                        <span class="portfolio-action-btn"><i class="fa-solid fa-expand"></i></span>
-                    </div>
+                <!-- Original Before Photos -->
+                <div class="gallery-card">
+                    <span class="gallery-badge badge-before">BEFORE</span>
+                    <img src="assets/bundy-before-1.webp" alt="452 Bundy Before 1" class="lightbox-trigger" data-caption="452 S Bundy Dr - Original Property Condition Photo 1" width="1080" height="720" loading="lazy" decoding="async">
                 </div>
-
-                <!-- Photo 3: Open Vaulted Great Room -->
-                <div class="gallery-card lightbox-trigger" data-src="assets/452-bundy-greatroom.jpg" data-caption="452 Bundy - Open Vaulted Great Room & Living Lounge showing Marble Island and Triangular Transom Window">
-                    <img src="assets/452-bundy-greatroom.jpg" alt="452 Bundy Open Vaulted Great Room">
-                    <div class="portfolio-overlay">
-                        <span class="portfolio-action-btn"><i class="fa-solid fa-expand"></i></span>
-                    </div>
+                <div class="gallery-card">
+                    <span class="gallery-badge badge-before">BEFORE</span>
+                    <img src="assets/bundy-before-2.webp" alt="452 Bundy Before 2" class="lightbox-trigger" data-caption="452 S Bundy Dr - Original Property Condition Photo 2" width="1080" height="720" loading="lazy" decoding="async">
                 </div>
-
-                <!-- Photo 4: Luxury Spa Primary Bathroom -->
-                <div class="gallery-card lightbox-trigger" data-src="assets/452-bundy-bath.jpg" data-caption="452 Bundy - Primary Spa Bath with Carved Marble Slab Sink, Wall-Mounted Brass Faucet & LED Backlit Niche Shower">
-                    <img src="assets/452-bundy-bath.jpg" alt="452 Bundy Primary Spa Bathroom with Carved Marble Sink">
-                    <div class="portfolio-overlay">
-                        <span class="portfolio-action-btn"><i class="fa-solid fa-expand"></i></span>
-                    </div>
+                <div class="gallery-card">
+                    <span class="gallery-badge badge-before">BEFORE</span>
+                    <img src="assets/bundy-before-3.webp" alt="452 Bundy Before 3" class="lightbox-trigger" data-caption="452 S Bundy Dr - Original Property Condition Photo 3" width="1080" height="720" loading="lazy" decoding="async">
                 </div>
-
-                <!-- Photo 5: Vaulted Living Room -->
-                <div class="gallery-card lightbox-trigger" data-src="assets/452-bundy-living.jpg" data-caption="452 Bundy - Open Vaulted Living Room with High Triangular Transom Windows & Black Patio Doors">
-                    <img src="assets/452-bundy-living.jpg" alt="452 Bundy Vaulted Living Room">
-                    <div class="portfolio-overlay">
-                        <span class="portfolio-action-btn"><i class="fa-solid fa-expand"></i></span>
-                    </div>
+                <div class="gallery-card">
+                    <span class="gallery-badge badge-before">BEFORE</span>
+                    <img src="assets/bundy-before-4.webp" alt="452 Bundy Before 4" class="lightbox-trigger" data-caption="452 S Bundy Dr - Original Property Condition Photo 4" width="1080" height="720" loading="lazy" decoding="async">
                 </div>
-
-                <!-- Photo 6: Primary Master Bedroom Suite -->
-                <div class="gallery-card lightbox-trigger" data-src="assets/452-bundy-bedroom.jpg" data-caption="452 Bundy - Primary Master Bedroom Suite Opening Out to Custom Turf Paver Driveway">
-                    <img src="assets/452-bundy-bedroom.jpg" alt="452 Bundy Primary Master Bedroom Suite">
-                    <div class="portfolio-overlay">
-                        <span class="portfolio-action-btn"><i class="fa-solid fa-expand"></i></span>
-                    </div>
+                <div class="gallery-card">
+                    <span class="gallery-badge badge-before">BEFORE</span>
+                    <img src="assets/bundy-before-5.webp" alt="452 Bundy Before 5" class="lightbox-trigger" data-caption="452 S Bundy Dr - Original Property Condition Photo 5" width="480" height="720" loading="lazy" decoding="async">
+                </div>
+                <div class="gallery-card">
+                    <span class="gallery-badge badge-before">BEFORE</span>
+                    <img src="assets/bundy-before-6.webp" alt="452 Bundy Before 6" class="lightbox-trigger" data-caption="452 S Bundy Dr - Original Property Condition Photo 6" width="480" height="720" loading="lazy" decoding="async">
+                </div>
+                <div class="gallery-card">
+                    <span class="gallery-badge badge-before">BEFORE</span>
+                    <img src="assets/bundy-before-7.webp" alt="452 Bundy Before 7" class="lightbox-trigger" data-caption="452 S Bundy Dr - Original Property Condition Photo 7" width="1080" height="720" loading="lazy" decoding="async">
+                </div>
+                <div class="gallery-card">
+                    <span class="gallery-badge badge-before">BEFORE</span>
+                    <img src="assets/bundy-before-8.webp" alt="452 Bundy Before 8" class="lightbox-trigger" data-caption="452 S Bundy Dr - Original Property Condition Photo 8" width="1080" height="720" loading="lazy" decoding="async">
+                </div>
+                <div class="gallery-card">
+                    <span class="gallery-badge badge-before">BEFORE</span>
+                    <img src="assets/bundy-before-9.webp" alt="452 Bundy Before 9" class="lightbox-trigger" data-caption="452 S Bundy Dr - Original Property Condition Photo 9" width="1080" height="720" loading="lazy" decoding="async">
+                </div>
+                <div class="gallery-card">
+                    <span class="gallery-badge badge-before">BEFORE</span>
+                    <img src="assets/bundy-before-10.webp" alt="452 Bundy Before 10" class="lightbox-trigger" data-caption="452 S Bundy Dr - Original Property Condition Photo 10" width="1080" height="720" loading="lazy" decoding="async">
+                </div>
+                <div class="gallery-card">
+                    <span class="gallery-badge badge-before">BEFORE</span>
+                    <img src="assets/bundy-before-11.webp" alt="452 Bundy Before 11" class="lightbox-trigger" data-caption="452 S Bundy Dr - Original Property Condition Photo 11" width="1080" height="720" loading="lazy" decoding="async">
+                </div>
+                <div class="gallery-card">
+                    <span class="gallery-badge badge-before">BEFORE</span>
+                    <img src="assets/bundy-before-12.webp" alt="452 Bundy Before 12" class="lightbox-trigger" data-caption="452 S Bundy Dr - Original Property Condition Photo 12" width="665" height="441" loading="lazy" decoding="async">
+                </div>
+                <div class="gallery-card">
+                    <span class="gallery-badge badge-before">BEFORE</span>
+                    <img src="assets/bundy-before-13.webp" alt="452 Bundy Before 13" class="lightbox-trigger" data-caption="452 S Bundy Dr - Original Property Condition Photo 13" width="1080" height="720" loading="lazy" decoding="async">
+                </div>
+                <div class="gallery-card">
+                    <span class="gallery-badge badge-before">BEFORE</span>
+                    <img src="assets/bundy-before-14.webp" alt="452 Bundy Before 14" class="lightbox-trigger" data-caption="452 S Bundy Dr - Original Property Condition Photo 14" width="1080" height="720" loading="lazy" decoding="async">
+                </div>
+                <div class="gallery-card">
+                    <span class="gallery-badge badge-before">BEFORE</span>
+                    <img src="assets/bundy-before-15.webp" alt="452 Bundy Before 15" class="lightbox-trigger" data-caption="452 S Bundy Dr - Original Property Condition Photo 15" width="1080" height="720" loading="lazy" decoding="async">
+                </div>
+                <div class="gallery-card">
+                    <span class="gallery-badge badge-before">BEFORE</span>
+                    <img src="assets/bundy-before-16.webp" alt="452 Bundy Before 16" class="lightbox-trigger" data-caption="452 S Bundy Dr - Original Property Condition Photo 16" width="1080" height="720" loading="lazy" decoding="async">
+                </div>
+                <div class="gallery-card">
+                    <span class="gallery-badge badge-before">BEFORE</span>
+                    <img src="assets/bundy-before-17.webp" alt="452 Bundy Before 17" class="lightbox-trigger" data-caption="452 S Bundy Dr - Original Property Condition Photo 17" width="1132" height="720" loading="lazy" decoding="async">
+                </div>
+                <div class="gallery-card">
+                    <span class="gallery-badge badge-before">BEFORE</span>
+                    <img src="assets/bundy-before-18.webp" alt="452 Bundy Before 18" class="lightbox-trigger" data-caption="452 S Bundy Dr - Original Property Condition Photo 18" width="1080" height="720" loading="lazy" decoding="async">
+                </div>
+                <div class="gallery-card">
+                    <span class="gallery-badge badge-before">BEFORE</span>
+                    <img src="assets/bundy-before-19.webp" alt="452 Bundy Before 19" class="lightbox-trigger" data-caption="452 S Bundy Dr - Original Property Condition Photo 19" width="665" height="441" loading="lazy" decoding="async">
+                </div>
+                <div class="gallery-card">
+                    <span class="gallery-badge badge-before">BEFORE</span>
+                    <img src="assets/bundy-before-20.webp" alt="452 Bundy Before 20" class="lightbox-trigger" data-caption="452 S Bundy Dr - Original Property Condition Photo 20" width="1080" height="720" loading="lazy" decoding="async">
+                </div>
+                <div class="gallery-card">
+                    <span class="gallery-badge badge-before">BEFORE</span>
+                    <img src="assets/bundy-before-21.webp" alt="452 Bundy Before 21" class="lightbox-trigger" data-caption="452 S Bundy Dr - Original Property Condition Photo 21" width="1080" height="720" loading="lazy" decoding="async">
+                </div>
+                <div class="gallery-card">
+                    <span class="gallery-badge badge-before">BEFORE</span>
+                    <img src="assets/bundy-before-22.webp" alt="452 Bundy Before 22" class="lightbox-trigger" data-caption="452 S Bundy Dr - Original Property Condition Photo 22" width="1080" height="720" loading="lazy" decoding="async">
+                </div>
+                <div class="gallery-card">
+                    <span class="gallery-badge badge-before">BEFORE</span>
+                    <img src="assets/bundy-before-23.webp" alt="452 Bundy Before 23" class="lightbox-trigger" data-caption="452 S Bundy Dr - Original Property Condition Photo 23" width="1080" height="720" loading="lazy" decoding="async">
+                </div>
+                <div class="gallery-card">
+                    <span class="gallery-badge badge-before">BEFORE</span>
+                    <img src="assets/bundy-before-24.webp" alt="452 Bundy Before 24" class="lightbox-trigger" data-caption="452 S Bundy Dr - Original Property Condition Photo 24" width="480" height="720" loading="lazy" decoding="async">
+                </div>
+                <div class="gallery-card">
+                    <span class="gallery-badge badge-before">BEFORE</span>
+                    <img src="assets/bundy-before-25.webp" alt="452 Bundy Before 25" class="lightbox-trigger" data-caption="452 S Bundy Dr - Original Property Condition Photo 25" width="1080" height="720" loading="lazy" decoding="async">
+                </div>
+                <div class="gallery-card">
+                    <span class="gallery-badge badge-before">BEFORE</span>
+                    <img src="assets/bundy-before-26.webp" alt="452 Bundy Before 26" class="lightbox-trigger" data-caption="452 S Bundy Dr - Original Property Condition Photo 26" width="480" height="720" loading="lazy" decoding="async">
+                </div>
+                <div class="gallery-card">
+                    <span class="gallery-badge badge-before">BEFORE</span>
+                    <img src="assets/bundy-before-27.webp" alt="452 Bundy Before 27" class="lightbox-trigger" data-caption="452 S Bundy Dr - Original Property Condition Photo 27" width="1080" height="720" loading="lazy" decoding="async">
+                </div>
+                <div class="gallery-card">
+                    <span class="gallery-badge badge-before">BEFORE</span>
+                    <img src="assets/bundy-before-28.webp" alt="452 Bundy Before 28" class="lightbox-trigger" data-caption="452 S Bundy Dr - Original Property Condition Photo 28" width="1080" height="720" loading="lazy" decoding="async">
+                </div>
+                <div class="gallery-card">
+                    <span class="gallery-badge badge-before">BEFORE</span>
+                    <img src="assets/bundy-before-29.webp" alt="452 Bundy Before 29" class="lightbox-trigger" data-caption="452 S Bundy Dr - Original Property Condition Photo 29" width="1080" height="720" loading="lazy" decoding="async">
+                </div>
+                <div class="gallery-card">
+                    <span class="gallery-badge badge-before">BEFORE</span>
+                    <img src="assets/bundy-before-30.webp" alt="452 Bundy Before 30" class="lightbox-trigger" data-caption="452 S Bundy Dr - Original Property Condition Photo 30" width="1080" height="720" loading="lazy" decoding="async">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Lightbox Modal Popup -->
-    <div class="lightbox-modal" id="lightboxModal">
-        <div class="lightbox-content">
-            <span class="lightbox-close" id="lightboxClose">&times;</span>
-            <img src="" alt="" class="lightbox-img" id="lightboxImg">
-            <p class="lightbox-caption" id="lightboxCaption"></p>
-        </div>
-    </div>
-
-    <!-- Footer Area -->
+    <!-- Footer -->
     <footer id="contact" class="footer">
         <div class="footer-cta-container">
             <div class="footer-cta-left">
@@ -317,58 +596,26 @@
                     <a href="tel:4247776090" class="btn btn-contact-white">CALL (424) 777-6090 <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
-
             <div class="footer-cta-middle scroll-animate fade-in-up">
-                <div class="info-item">
-                    <i class="fa-solid fa-phone info-icon"></i>
-                    <div>
-                        <span class="info-label">CALL US</span>
-                        <a href="tel:4247776090" class="info-value">(424) 777-6090</a>
-                    </div>
-                </div>
-                <div class="info-item">
-                    <i class="fa-solid fa-envelope info-icon"></i>
-                    <div>
-                        <span class="info-label">EMAIL US</span>
-                        <a href="mailto:info@pacificremodel.us" class="info-value">info@pacificremodel.us</a>
-                    </div>
-                </div>
-                <div class="info-item">
-                    <i class="fa-solid fa-id-card info-icon"></i>
-                    <div>
-                        <span class="info-label">LICENCE</span>
-                        <span class="info-value">#1111456</span>
-                    </div>
-                </div>
-                <div class="info-item">
-                    <i class="fa-solid fa-location-dot info-icon"></i>
-                    <div>
-                        <span class="info-label">FIND US</span>
-                        <span class="info-value">1215 Lachman Lane<br>Pacific Palisades, CA 90272</span>
-                    </div>
-                </div>
+                <div class="info-item"><i class="fa-solid fa-phone info-icon"></i><div><span class="info-label">CALL US</span><a href="tel:4247776090" class="info-value">(424) 777-6090</a></div></div>
+                <div class="info-item"><i class="fa-solid fa-envelope info-icon"></i><div><span class="info-label">EMAIL US</span><a href="mailto:info@pacificremodel.us" class="info-value">info@pacificremodel.us</a></div></div>
+                <div class="info-item"><i class="fa-solid fa-id-card info-icon"></i><div><span class="info-label">LICENCE</span><span class="info-value">#1111456</span></div></div>
+                <div class="info-item"><i class="fa-solid fa-location-dot info-icon"></i><div><span class="info-label">FIND US</span><span class="info-value">1215 Lachman Lane<br>Pacific Palisades, CA 90272</span></div></div>
             </div>
-
             <div class="footer-cta-right scroll-animate fade-in-right">
-                <div class="footer-logo-wrap">
-                    <img src="assets/logo.png" alt="Pacific Remodel and Development logo" class="footer-logo-img">
-                </div>
+                <div class="footer-logo-wrap"><img src="assets/logo.webp" alt="Pacific Remodel and Development logo" class="footer-logo-img" width="180" height="52" fetchpriority="high" decoding="async"></div>
                 <p class="footer-slogan">Locally Owned & Operated in Pacific Palisades</p>
             </div>
         </div>
-
         <div class="footer-bottom">
-            <div class="footer-bottom-container">
-                <p>&copy; 2026 Pacific Remodel and Development. All Rights Reserved.</p>
-                <div class="footer-bottom-links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
-                </div>
+            <div class="container footer-bottom-flex">
+                <p class="copyright">&copy; 2026 Pacific Remodel and Development. All Rights Reserved.</p>
+                <div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a><a href="#">Lic. #1111456</a></div>
             </div>
         </div>
     </footer>
 
-    <!-- Javascript File -->
-    <script src="app.js"></script>
+    <div class="lightbox-modal" id="lightboxModal"><span class="lightbox-close" id="lightboxClose">&times;</span><img class="lightbox-content" id="lightboxImg" alt="Expanded Project Image"><div class="lightbox-caption" id="lightboxCaption"></div></div>
+    <script src="app.js" defer></script>
 </body>
 </html>

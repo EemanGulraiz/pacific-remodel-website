@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4045 Jackson Remodel Residence | Project Case Study | Pacific Remodel & Development</title>
+    <meta name="description" content="Case study of 4045 Jackson Ave in Culver City: Comprehensive interior and exterior residential remodel by Pacific Remodel and Development.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+    <style>
+        .project-meta-card { background-color: var(--color-white); border-radius: 12px; padding: 35px; box-shadow: 0 15px 40px rgba(0,0,0,0.06); border-top: 4px solid var(--color-slate-blue); }
+        .meta-item { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; border-bottom: 1px solid var(--color-bg-sand); font-size: 0.95rem; }
+        .meta-item:last-child { border-bottom: none; }
+        .meta-label { font-family: var(--font-heading); font-weight: 700; color: var(--color-navy); text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.5px; }
+        .meta-value { color: var(--color-muted-text); font-weight: 600; text-align: right; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; margin-top: 40px; }
+        .gallery-card { position: relative; border-radius: 8px; overflow: hidden; height: 280px; box-shadow: 0 10px 25px rgba(0,0,0,0.08); cursor: pointer; }
+        .gallery-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+        .gallery-card:hover img { transform: scale(1.08); }
+        .gallery-badge { position: absolute; top: 12px; left: 12px; padding: 4px 10px; border-radius: 4px; font-family: var(--font-heading); font-weight: 800; font-size: 0.65rem; letter-spacing: 1px; text-transform: uppercase; color: #fff; z-index: 2; }
+        .badge-before { background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(255,255,255,0.2); }
+        .badge-after { background: #0284c7; }
+        @media (max-width: 992px) { .gallery-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 600px) { .gallery-grid { grid-template-columns: 1fr; } }
+    </style>
+    <!-- Bulletproof Before & After Component Styles -->
+    <style>
+    .before-after-grid {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 30px !important;
+        margin-top: 20px !important;
+        align-items: stretch !important;
+    }
+    .before-after-grid .ba-card {
+        flex: 1 1 calc(50% - 15px) !important;
+        min-width: 280px !important;
+        box-sizing: border-box !important;
+        display: flex !important;
+        flex-direction: column !important;
+        border-radius: 12px !important;
+        overflow: hidden !important;
+        background: #ffffff !important;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.08) !important;
+        border: 1px solid rgba(0,0,0,0.06) !important;
+    }
+    .before-after-grid .ba-img-wrap {
+        width: 100% !important;
+        height: 300px !important;
+        max-height: 300px !important;
+        position: relative !important;
+        overflow: hidden !important;
+        background: #0f172a !important;
+    }
+    .before-after-grid .ba-img-wrap img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: center !important;
+        display: block !important;
+    }
+    .before-after-grid .ba-badge {
+        position: absolute !important;
+        top: 15px !important;
+        left: 15px !important;
+        padding: 6px 14px !important;
+        border-radius: 4px !important;
+        font-family: var(--font-heading), sans-serif !important;
+        font-weight: 800 !important;
+        font-size: 0.75rem !important;
+        letter-spacing: 1.2px !important;
+        text-transform: uppercase !important;
+        color: #ffffff !important;
+        z-index: 5 !important;
+    }
+    .before-after-grid .ba-badge-before {
+        background: #0f172a !important;
+        border: 1px solid rgba(255,255,255,0.25) !important;
+    }
+    .before-after-grid .ba-badge-after {
+        background: #0284c7 !important;
+        color: #ffffff !important;
+    }
+    .before-after-grid .ba-caption {
+        padding: 20px 24px !important;
+        background: #ffffff !important;
+        display: flex !important;
+        flex-direction: column !important;
+        flex-grow: 1 !important;
+    }
+    .before-after-grid .ba-title {
+        font-family: var(--font-heading) !important;
+        font-size: 1.1rem !important;
+        font-weight: 700 !important;
+        color: var(--color-navy) !important;
+        margin-bottom: 6px !important;
+    }
+    .before-after-grid .ba-desc {
+        font-size: 0.9rem !important;
+        color: var(--color-muted-text) !important;
+        line-height: 1.5 !important;
+    }
+    @media (max-width: 768px) {
+        .before-after-grid .ba-card {
+            flex: 1 1 100% !important;
+        }
+    }
+    </style>
+    <link rel="canonical" href="https://pacificremodel.us/project-jackson4045.html">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pacificremodel.us/project-jackson4045.html">
+    <meta property="og:title" content="4045 Jackson Remodel Residence | Project Case Study | Pacific Remodel & Development">
+    <meta property="og:description" content="Case study of 4045 Jackson Ave in Culver City: Comprehensive interior and exterior residential remodel by Pacific Remodel and Development.">
+    <meta property="og:image" content="https://pacificremodel.us/assets/jackson-after-living1.webp">
+    <meta property="og:site_name" content="Pacific Remodel and Development">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://pacificremodel.us/project-jackson4045.html">
+    <meta name="twitter:title" content="4045 Jackson Remodel Residence | Project Case Study | Pacific Remodel & Development">
+    <meta name="twitter:description" content="Case study of 4045 Jackson Ave in Culver City: Comprehensive interior and exterior residential remodel by Pacific Remodel and Development.">
+    <meta name="twitter:image" content="https://pacificremodel.us/assets/jackson-after-living1.webp">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html" class="logo-link"><img src="assets/logo.webp" alt="Pacific Remodel" class="logo-img" width="180" height="52" fetchpriority="high" decoding="async"></a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+            <nav class="nav" id="navMenu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link">HOME</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">ABOUT US</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">SERVICES</a></li>
+                    <li class="nav-item"><a href="projects.html" class="nav-link active">PROJECTS</a></li>
+                    <li class="nav-item"><a href="before-after.html" class="nav-link">BEFORE & AFTER</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">CONTACT</a></li>
+                </ul>
+            </nav>
+            <div class="header-cta"><a href="contact.html" class="btn btn-primary-header">GET A QUOTE <i class="fa-solid fa-arrow-right"></i></a></div>
+        </div>
+    </header>
+
+    <div class="mobile-nav-overlay" id="mobileNavOverlay">
+        <ul class="mobile-nav-list">
+            <li><a href="index.html" class="mobile-nav-link">HOME</a></li>
+            <li><a href="about.html" class="mobile-nav-link">ABOUT US</a></li>
+            <li><a href="services.html" class="mobile-nav-link">SERVICES</a></li>
+            <li><a href="projects.html" class="mobile-nav-link active">PROJECTS</a></li>
+            <li><a href="before-after.html" class="mobile-nav-link">BEFORE & AFTER</a></li>
+            <li><a href="contact.html" class="mobile-nav-link">CONTACT</a></li>
+            <li><a href="contact.html" class="btn btn-primary-mobile">GET A QUOTE <i class="fa-solid fa-arrow-right"></i></a></li>
+        </ul>
+    </div>
+
+    <section class="subpage-hero">
+        <div class="subpage-hero-bg hero-bg-projects"></div>
+        <div class="blueprint-grid"></div>
+        <div class="container">
+            <div class="subpage-hero-content fade-in-up">
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a> <span class="breadcrumb-separator"><i class="fa-solid fa-chevron-right"></i></span>
+                    <a href="projects.html">Projects</a> <span class="breadcrumb-separator"><i class="fa-solid fa-chevron-right"></i></span>
+                    <span>4045 Jackson Remodel Residence</span>
+                </div>
+                <h1 class="subpage-title">4045 JACKSON REMODEL RESIDENCE</h1>
+                <p class="subpage-subtitle">Major interior and exterior residential overhaul in Culver City featuring structural wall removal, open-concept floorplan, designer finishes, and land clearing.</p>
+            </div>
+        </div>
+    </section>
+
+    <section style="padding: 90px 0; background-color: var(--color-bg-sand);">
+        <div class="container">
+            <div class="service-module-grid">
+                <div class="scroll-animate fade-in-left">
+                    <span class="section-tag">PROJECT CASE STUDY</span>
+                    <h2 class="section-title">PROJECT VISION & EXECUTION</h2>
+                    <p class="section-desc" style="margin-bottom: 20px;">Located at 4045 Jackson Ave, Culver City, California, this major remodel project transformed an aging property into a bright contemporary residence. Pacific Remodel and Development led demolition, wall framing removal, plumbing/electrical upgrades, and custom interior finishes.</p>
+                    <p class="section-desc" style="margin-bottom: 25px;">Key improvements include expanding the primary living space, installing modern hardwood flooring, upgrading bathroom tilework and vanities, and clearing overgrown yard grounds for future outdoor living.</p>
+                </div>
+                <div class="scroll-animate fade-in-right">
+                    <div class="project-meta-card">
+                        <h3 style="font-size: 1.3rem; font-weight: 800; color: var(--color-navy); margin-bottom: 20px; text-transform: uppercase;">PROJECT SPECIFICATIONS</h3>
+                        <div class="meta-item"><span class="meta-label"><i class="fa-solid fa-location-dot" style="color: var(--color-slate-blue);"></i> Location</span><span class="meta-value">4045 Jackson Ave, Culver City, CA</span></div>
+                        <div class="meta-item"><span class="meta-label"><i class="fa-solid fa-hammer" style="color: var(--color-slate-blue);"></i> Project Scope</span><span class="meta-value">Major Home Remodel & Structural Overhaul</span></div>
+                        <div class="meta-item"><span class="meta-label"><i class="fa-solid fa-building" style="color: var(--color-slate-blue);"></i> General Contractor</span><span class="meta-value">Pacific Remodel and Development</span></div>
+                        <div class="meta-item"><span class="meta-label"><i class="fa-solid fa-id-card" style="color: var(--color-slate-blue);"></i> License</span><span class="meta-value">Lic. #1111456</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BEFORE & AFTER TRANSFORMATION COMPARISONS -->
+            <div style="margin-top: 70px;" class="scroll-animate fade-in-up">
+                <div class="text-center" style="text-align: center; max-width: 750px; margin: 0 auto 40px;">
+                    <span class="section-tag">BEFORE & AFTER TRANSFORMATION</span>
+                    <h2 class="section-title">4045 JACKSON REMODEL COMPARISON</h2>
+                    <p class="section-desc">Compare original property conditions, wall demolition framing, stripped plumbing, and overgrown grounds against the completed living spaces by Pacific Remodel and Development.</p>
+                </div>
+
+                <!-- Pair 1: Living Room Wall Demolition & Framing -->
+                <h3 style="font-size: 1.2rem; font-weight: 800; color: var(--color-navy); margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.5px;"><i class="fa-solid fa-couch" style="color: var(--color-slate-blue);"></i> 1. OPEN-CONCEPT LIVING ROOM SUITE</h3>
+                <div class="before-after-grid" style="margin-top: 0; margin-bottom: 50px;">
+                    <div class="ba-card">
+                        <span class="ba-badge ba-badge-before">BEFORE • WALL DEMOLITION</span>
+                        <div class="ba-img-wrap">
+                            <img src="assets/jackson-before-framing2.webp" alt="Original Living Framing Before" class="lightbox-trigger" data-caption="4045 Jackson - Interior Wall Framing Demolition Phase" width="768" height="1024" loading="lazy" decoding="async">
+                        </div>
+                        <div class="ba-caption">
+                            <h4 class="ba-title">Wall Demolition & Framing Phase</h4>
+                            <p class="ba-desc">Enclosed wall partitions, exposed framing studs, stripped plaster ceiling, and rough plumbing subflooring.</p>
+                        </div>
+                    </div>
+                    <div class="ba-card">
+                        <span class="ba-badge ba-badge-after">AFTER • MODERN LIVING SUITE</span>
+                        <div class="ba-img-wrap">
+                            <img src="assets/jackson4045-after-1.webp" alt="Completed Living Suite After" class="lightbox-trigger" data-caption="4045 Jackson - Open Concept Living Suite After Remodel" width="500" height="334" loading="lazy" decoding="async">
+                        </div>
+                        <div class="ba-caption">
+                            <h4 class="ba-title">Open-Concept Modern Living Area</h4>
+                            <p class="ba-desc">Light-filled open living space featuring wide-plank hardwood floors, smooth drywall, and recessed lighting.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pair 2: Kitchen Gut & Layout -->
+                <h3 style="font-size: 1.2rem; font-weight: 800; color: var(--color-navy); margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.5px;"><i class="fa-solid fa-kitchen-set" style="color: var(--color-slate-blue);"></i> 2. KITCHEN GUT & INTERIOR SUITE</h3>
+                <div class="before-after-grid" style="margin-top: 0; margin-bottom: 50px;">
+                    <div class="ba-card">
+                        <span class="ba-badge ba-badge-before">BEFORE • GUTTED KITCHEN</span>
+                        <div class="ba-img-wrap">
+                            <img src="assets/jackson-before-kitchen1.webp" alt="Original Gutted Kitchen Before" class="lightbox-trigger" data-caption="4045 Jackson - Gutted Kitchen Floor & Stripped Drywall Phase" width="768" height="1024" loading="lazy" decoding="async">
+                        </div>
+                        <div class="ba-caption">
+                            <h4 class="ba-title">Gutted Kitchen Demo Phase</h4>
+                            <p class="ba-desc">Stripped wall framing, exposed electrical wiring, old plumbing lines, and worn tile flooring.</p>
+                        </div>
+                    </div>
+                    <div class="ba-card">
+                        <span class="ba-badge ba-badge-after">AFTER • GOURMET KITCHEN</span>
+                        <div class="ba-img-wrap">
+                            <img src="assets/jackson4045-after-2.webp" alt="Completed Gourmet Kitchen After" class="lightbox-trigger" data-caption="4045 Jackson - Gourmet Kitchen Suite After Remodel" width="500" height="327" loading="lazy" decoding="async">
+                        </div>
+                        <div class="ba-caption">
+                            <h4 class="ba-title">Refinished Gourmet Kitchen Suite</h4>
+                            <p class="ba-desc">Clean modern cabinetry, stone countertops, fresh hardwood flooring, and seamless layout.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pair 3: Bathroom Overhaul -->
+                <h3 style="font-size: 1.2rem; font-weight: 800; color: var(--color-navy); margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.5px;"><i class="fa-solid fa-bath" style="color: var(--color-slate-blue);"></i> 3. BATHROOM DEMO & MODERN VANITY</h3>
+                <div class="before-after-grid" style="margin-top: 0; margin-bottom: 50px;">
+                    <div class="ba-card">
+                        <span class="ba-badge ba-badge-before">BEFORE • DATED BATHROOM</span>
+                        <div class="ba-img-wrap">
+                            <img src="assets/jackson-before-bath.webp" alt="Original Green Bathroom Before" class="lightbox-trigger" data-caption="4045 Jackson - Dated Green Bathroom Vanity & Tile Surround" width="768" height="1024" loading="lazy" decoding="async">
+                        </div>
+                        <div class="ba-caption">
+                            <h4 class="ba-title">Original Dated Bathroom</h4>
+                            <p class="ba-desc">Dated yellow tile subfloor, green wall paint, obsolete vanity cabinet, and old curtain shower stall.</p>
+                        </div>
+                    </div>
+                    <div class="ba-card">
+                        <span class="ba-badge ba-badge-after">AFTER • MODERN BATH SUITE</span>
+                        <div class="ba-img-wrap">
+                            <img src="assets/jackson4045-after-3.webp" alt="Completed Bathroom Suite After" class="lightbox-trigger" data-caption="4045 Jackson - Designer Bathroom Suite After Remodel" width="500" height="310" loading="lazy" decoding="async">
+                        </div>
+                        <div class="ba-caption">
+                            <h4 class="ba-title">Designer Spa Bathroom Suite</h4>
+                            <p class="ba-desc">Updated tile surround, contemporary vanity fixtures, and polished interior hardware.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pair 4: Yard Grounds & Clearing -->
+                <h3 style="font-size: 1.2rem; font-weight: 800; color: var(--color-navy); margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.5px;"><i class="fa-solid fa-tree" style="color: var(--color-slate-blue);"></i> 4. REAR YARD & GROUNDS CLEARING</h3>
+                <div class="before-after-grid" style="margin-top: 0; margin-bottom: 50px;">
+                    <div class="ba-card">
+                        <span class="ba-badge ba-badge-before">BEFORE • OVERGROWN YARD</span>
+                        <div class="ba-img-wrap">
+                            <img src="assets/jackson-before-backyard.webp" alt="Overgrown Rear Yard Before" class="lightbox-trigger" data-caption="4045 Jackson - Overgrown Rear Yard Debris & Dilapidated Shed" width="1024" height="768" loading="lazy" decoding="async">
+                        </div>
+                        <div class="ba-caption">
+                            <h4 class="ba-title">Overgrown Rear Yard Grounds</h4>
+                            <p class="ba-desc">Dilapidated wooden shed, unmaintained garden debris, and overgrown weeds prior to site clearing.</p>
+                        </div>
+                    </div>
+                    <div class="ba-card">
+                        <span class="ba-badge ba-badge-after">AFTER • RESTORED GROUNDS</span>
+                        <div class="ba-img-wrap">
+                            <img src="assets/jackson4045-after-4.webp" alt="Restored Exterior Grounds After" class="lightbox-trigger" data-caption="4045 Jackson - Restored Exterior Grounds & Patio After Remodel" width="500" height="340" loading="lazy" decoding="async">
+                        </div>
+                        <div class="ba-caption">
+                            <h4 class="ba-title">Restored Exterior Grounds & Patio</h4>
+                            <p class="ba-desc">Cleared yard perimeter, fresh exterior paint touchups, and upgraded outdoor seating patio.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CURATED PHOTO GALLERY -->
+            <div style="margin-top: 80px;">
+                <span class="section-tag">PROJECT PHOTO GALLERY</span>
+                <h2 class="section-title">4045 JACKSON PHOTO GALLERY</h2>
+                <div class="gallery-grid scroll-animate fade-in-up">
+                    <div class="gallery-card"><span class="gallery-badge badge-after">AFTER</span><img src="assets/jackson4045-after-1.webp" alt="Living Suite After" class="lightbox-trigger" data-caption="4045 Jackson - Modern Living Room Suite" width="500" height="334" loading="lazy" decoding="async"></div>
+                    <div class="gallery-card"><span class="gallery-badge badge-after">AFTER</span><img src="assets/jackson4045-after-2.webp" alt="Gourmet Kitchen After" class="lightbox-trigger" data-caption="4045 Jackson - Gourmet Kitchen Suite" width="500" height="327" loading="lazy" decoding="async"></div>
+                    <div class="gallery-card"><span class="gallery-badge badge-after">AFTER</span><img src="assets/jackson4045-after-3.webp" alt="Bathroom After" class="lightbox-trigger" data-caption="4045 Jackson - Designer Bathroom Suite" width="500" height="310" loading="lazy" decoding="async"></div>
+                    <div class="gallery-card"><span class="gallery-badge badge-after">AFTER</span><img src="assets/jackson4045-after-4.webp" alt="Exterior Patio After" class="lightbox-trigger" data-caption="4045 Jackson - Exterior Grounds & Patio" width="500" height="340" loading="lazy" decoding="async"></div>
+                    <div class="gallery-card"><span class="gallery-badge badge-after">AFTER</span><img src="assets/jackson-after-living1.webp" alt="Living Room Open View" class="lightbox-trigger" data-caption="4045 Jackson - Open Concept Living View" width="600" height="400" loading="lazy" decoding="async"></div>
+                    <div class="gallery-card"><span class="gallery-badge badge-before">BEFORE</span><img src="assets/jackson-before-framing2.webp" alt="Interior Framing Demo" class="lightbox-trigger" data-caption="4045 Jackson - Interior Wall Framing Demolition" width="768" height="1024" loading="lazy" decoding="async"></div>
+                    <div class="gallery-card"><span class="gallery-badge badge-before">BEFORE</span><img src="assets/jackson-before-kitchen1.webp" alt="Kitchen Demo 1" class="lightbox-trigger" data-caption="4045 Jackson - Kitchen Demolition & Tile Removal" width="768" height="1024" loading="lazy" decoding="async"></div>
+                    <div class="gallery-card"><span class="gallery-badge badge-before">BEFORE</span><img src="assets/jackson-before-kitchen2.webp" alt="Kitchen Demo 2" class="lightbox-trigger" data-caption="4045 Jackson - Stripped Kitchen Plumbing & Drywall" width="768" height="1024" loading="lazy" decoding="async"></div>
+                    <div class="gallery-card"><span class="gallery-badge badge-before">BEFORE</span><img src="assets/jackson-before-bath.webp" alt="Original Bath" class="lightbox-trigger" data-caption="4045 Jackson - Original Dated Green Bathroom" width="768" height="1024" loading="lazy" decoding="async"></div>
+                    <div class="gallery-card"><span class="gallery-badge badge-before">BEFORE</span><img src="assets/jackson-before-backyard.webp" alt="Backyard Debris" class="lightbox-trigger" data-caption="4045 Jackson - Overgrown Backyard & Shed" width="1024" height="768" loading="lazy" decoding="async"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="footer">
+        <div class="footer-cta-container">
+            <div class="footer-cta-left">
+                <div class="cta-left-content scroll-animate fade-in-left">
+                    <span class="cta-tag">READY TO START YOUR PROJECT?</span>
+                    <h2 class="cta-heading">Let's build something exceptional together.</h2>
+                    <a href="tel:4247776090" class="btn btn-contact-white">CALL (424) 777-6090 <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="footer-cta-middle scroll-animate fade-in-up">
+                <div class="info-item"><i class="fa-solid fa-phone info-icon"></i><div><span class="info-label">CALL US</span><a href="tel:4247776090" class="info-value">(424) 777-6090</a></div></div>
+                <div class="info-item"><i class="fa-solid fa-envelope info-icon"></i><div><span class="info-label">EMAIL US</span><a href="mailto:info@pacificremodel.us" class="info-value">info@pacificremodel.us</a></div></div>
+                <div class="info-item"><i class="fa-solid fa-id-card info-icon"></i><div><span class="info-label">LICENCE</span><span class="info-value">#1111456</span></div></div>
+                <div class="info-item"><i class="fa-solid fa-location-dot info-icon"></i><div><span class="info-label">FIND US</span><span class="info-value">1215 Lachman Lane<br>Pacific Palisades, CA 90272</span></div></div>
+            </div>
+            <div class="footer-cta-right scroll-animate fade-in-right">
+                <div class="footer-logo-wrap"><img src="assets/logo.webp" alt="Pacific Remodel and Development logo" class="footer-logo-img" width="180" height="52" fetchpriority="high" decoding="async"></div>
+                <p class="footer-slogan">Locally Owned & Operated in Pacific Palisades</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-flex">
+                <p class="copyright">&copy; 2026 Pacific Remodel and Development. All Rights Reserved.</p>
+                <div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a><a href="#">Lic. #1111456</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="lightbox-modal" id="lightboxModal"><span class="lightbox-close" id="lightboxClose">&times;</span><img class="lightbox-content" id="lightboxImg" alt="Expanded Project Image"><div class="lightbox-caption" id="lightboxCaption"></div></div>
+    <script src="app.js" defer></script>
+</body>
+</html>

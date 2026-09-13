@@ -40,11 +40,83 @@
     <meta name="twitter:title" content="5336 Winnetka Estate & Pool Deck | Project Case Study | Pacific Remodel & Development">
     <meta name="twitter:description" content="Case study of 5336 Winnetka Ave in Woodland Hills: Custom in-ground swimming pool deck, outdoor lounge patio, white chef kitchen, & foyer entrance.">
     <meta name="twitter:image" content="https://pacificremodel.us/assets/5336-winnetka-pool.jpg">
+
+    <!-- Bulletproof Before & After Component Styles -->
+    <style>
+    .before-after-grid {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 30px !important;
+        margin-top: 20px !important;
+        align-items: stretch !important;
+    }
+    .before-after-grid .ba-card {
+        flex: 1 1 calc(50% - 15px) !important;
+        min-width: 280px !important;
+        box-sizing: border-box !important;
+        display: flex !important;
+        flex-direction: column !important;
+        border-radius: 12px !important;
+        overflow: hidden !important;
+        background: #ffffff !important;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.08) !important;
+        border: 1px solid rgba(0,0,0,0.06) !important;
+    }
+    .before-after-grid .ba-img-wrap {
+        width: 100% !important;
+        height: 300px !important;
+        max-height: 300px !important;
+        position: relative !important;
+        overflow: hidden !important;
+        background: #0f172a !important;
+    }
+    .before-after-grid .ba-img-wrap img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: center !important;
+        display: block !important;
+    }
+    .before-after-grid .ba-badge {
+        position: absolute !important;
+        top: 15px !important;
+        left: 15px !important;
+        padding: 6px 14px !important;
+        border-radius: 4px !important;
+        font-family: var(--font-heading), sans-serif !important;
+        font-weight: 800 !important;
+        font-size: 0.75rem !important;
+        letter-spacing: 1.2px !important;
+        text-transform: uppercase !important;
+        color: #ffffff !important;
+        z-index: 5 !important;
+    }
+    .before-after-grid .ba-badge-before {
+        background: #0f172a !important;
+        border: 1px solid rgba(255,255,255,0.25) !important;
+    }
+    .before-after-grid .ba-badge-after {
+        background: #0284c7 !important;
+        color: #ffffff !important;
+    }
+    .before-after-grid .ba-caption {
+        padding: 20px 24px !important;
+        background: #ffffff !important;
+        display: flex !important;
+        flex-direction: column !important;
+        flex-grow: 1 !important;
+    }
+    @media (max-width: 768px) {
+        .before-after-grid .ba-card {
+            flex: 1 1 100% !important;
+        }
+    }
+    </style>
 </head>
 <body>
     <header class="header">
         <div class="header-container">
-            <a href="index.html" class="logo-link"><img src="assets/logo.png" alt="Pacific Remodel" class="logo-img"></a>
+            <a href="index.html" class="logo-link"><img src="assets/logo.webp" alt="Pacific Remodel" class="logo-img" width="180" height="52" fetchpriority="high" decoding="async"></a>
             <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
             <nav class="nav" id="navMenu">
                 <ul class="nav-list">
@@ -108,30 +180,114 @@
                 </div>
             </div>
 
-            <div style="margin-top: 80px;">
+            <!-- BEFORE & AFTER TRANSFORMATION COMPARISONS -->
+            <div style="margin-top: 70px;" class="scroll-animate fade-in-up">
+                <div class="text-center" style="text-align: center; max-width: 750px; margin: 0 auto 40px;">
+                    <span class="section-tag">BEFORE & AFTER TRANSFORMATION</span>
+                    <h2 class="section-title">5336 WINNETKA REMODEL COMPARISON</h2>
+                    <p class="section-desc">Compare original property conditions, mold remediation, interior wall demolition, and grounds clearing against the completed estate remodel by Pacific Remodel and Development.</p>
+                </div>
+
+                <!-- Pair 1: Front Exterior Facade -->
+                <h3 style="font-size: 1.2rem; font-weight: 800; color: var(--color-navy); margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.5px;"><i class="fa-solid fa-house" style="color: var(--color-slate-blue);"></i> 1. FRONT EXTERIOR FACADE & LANDSCAPING</h3>
+                <div class="before-after-grid" style="margin-top: 0; margin-bottom: 50px;">
+                    <div class="ba-card">
+                        <span class="ba-badge ba-badge-before">BEFORE • ORIGINAL FRONT</span>
+                        <div class="ba-img-wrap">
+                            <img src="assets/winnetka-before-front.webp" alt="Original Front Exterior Before" class="lightbox-trigger" data-caption="5336 Winnetka - Original Front Exterior Facade with Overgrown Weeds & Trash Bags" width="1024" height="768" loading="lazy" decoding="async">
+                        </div>
+                        <div class="ba-caption">
+                            <h4 class="ba-title">Original Front Facade & Grounds</h4>
+                            <p class="ba-desc">Overgrown weeds, neglected fountain lawn, and dated exterior paint.</p>
+                        </div>
+                    </div>
+                    <div class="ba-card">
+                        <span class="ba-badge ba-badge-after">AFTER • COMPLETED FACADE</span>
+                        <div class="ba-img-wrap">
+                            <img src="assets/5336-winnetka-front.webp" alt="Completed Front Exterior Facade After" class="lightbox-trigger" data-caption="5336 Winnetka - Completed Front Exterior Facade with Columned Entry Portico & Garden Fountain" width="600" height="369" loading="lazy" decoding="async">
+                        </div>
+                        <div class="ba-caption">
+                            <h4 class="ba-title">Restored Estate Facade & Lawn</h4>
+                            <p class="ba-desc">Refreshed cream stucco facade, restored portico columns, clean concrete walkway, and pea gravel landscaping.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pair 2: Swimming Pool Deck & Rear Grounds -->
+                <h3 style="font-size: 1.2rem; font-weight: 800; color: var(--color-navy); margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.5px;"><i class="fa-solid fa-water-ladder" style="color: var(--color-slate-blue);"></i> 2. IN-GROUND SWIMMING POOL DECK</h3>
+                <div class="before-after-grid" style="margin-top: 0; margin-bottom: 50px;">
+                    <div class="ba-card">
+                        <span class="ba-badge ba-badge-before">BEFORE • POOL GROUNDS</span>
+                        <div class="ba-img-wrap">
+                            <img src="assets/winnetka-before-pool.webp" alt="Original Unmaintained Pool Deck Before" class="lightbox-trigger" data-caption="5336 Winnetka - Original Unmaintained Pool Deck & Overgrown Vegetation" width="1024" height="768" loading="lazy" decoding="async">
+                        </div>
+                        <div class="ba-caption">
+                            <h4 class="ba-title">Original Neglected Pool Area</h4>
+                            <p class="ba-desc">Overgrown weeds, unmaintained pool water, and cracked brick perimeter coping.</p>
+                        </div>
+                    </div>
+                    <div class="ba-card">
+                        <span class="ba-badge ba-badge-after">AFTER • RESORT POOL DECK</span>
+                        <div class="ba-img-wrap">
+                            <img src="assets/5336-winnetka-pool.webp" alt="Completed Outdoor Swimming Pool Deck After" class="lightbox-trigger" data-caption="5336 Winnetka - Custom In-Ground Swimming Pool Deck, Sun Loungers & Covered Patio Lounge" width="600" height="401" loading="lazy" decoding="async">
+                        </div>
+                        <div class="ba-caption">
+                            <h4 class="ba-title">Resort-Style Outdoor Swimming Pool</h4>
+                            <p class="ba-desc">Re-plastered pool, custom concrete deck coping, sun loungers, and covered patio lounge.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pair 3: Wall Demolition to Gourmet Kitchen -->
+                <h3 style="font-size: 1.2rem; font-weight: 800; color: var(--color-navy); margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.5px;"><i class="fa-solid fa-kitchen-set" style="color: var(--color-slate-blue);"></i> 3. WALL DEMOLITION TO GOURMET KITCHEN</h3>
+                <div class="before-after-grid" style="margin-top: 0; margin-bottom: 50px;">
+                    <div class="ba-card">
+                        <span class="ba-badge ba-badge-before">BEFORE • WALL DEMO</span>
+                        <div class="ba-img-wrap">
+                            <img src="assets/winnetka-before-framing.webp" alt="Interior Framing & Kitchen Wall Removal Before" class="lightbox-trigger" data-caption="5336 Winnetka - Interior Kitchen Wall Removal & Exposed Framing Studs" width="1024" height="768" loading="lazy" decoding="async">
+                        </div>
+                        <div class="ba-caption">
+                            <h4 class="ba-title">Wall Removal & Framing Phase</h4>
+                            <p class="ba-desc">Demolition of load-bearing interior partition wall to open up the kitchen into the living area.</p>
+                        </div>
+                    </div>
+                    <div class="ba-card">
+                        <span class="ba-badge ba-badge-after">AFTER • WHITE CHEF KITCHEN</span>
+                        <div class="ba-img-wrap">
+                            <img src="assets/5336-winnetka-kitchen.webp" alt="Completed White Gourmet Kitchen After" class="lightbox-trigger" data-caption="5336 Winnetka - White Gourmet Kitchen with Large Marble Island" width="600" height="400" loading="lazy" decoding="async">
+                        </div>
+                        <div class="ba-caption">
+                            <h4 class="ba-title">White Gourmet Chef Kitchen</h4>
+                            <p class="ba-desc">Open-concept kitchen with large marble waterfall island, white cabinetry, and recessed lighting.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 60px;">
                 <span class="section-tag">AUTHENTIC PROJECT GALLERY</span>
                 <h2 class="section-title">5336 WINNETKA ESTATE & POOL DECK PHOTO GALLERY</h2>
                 <div class="gallery-grid scroll-animate fade-in-up">
                     <div class="gallery-card">
-                        <img src="assets/5336-winnetka-front.jpg" alt="Front Exterior Facade" class="lightbox-trigger" data-caption="5336 Winnetka - Front Exterior Facade with Columned Entry Portico, Concrete Walkway & Garden Fountain">
+                        <img src="assets/5336-winnetka-front.webp" alt="Front Exterior Facade" class="lightbox-trigger" data-caption="5336 Winnetka - Front Exterior Facade with Columned Entry Portico, Concrete Walkway & Garden Fountain" width="600" height="369" loading="lazy" decoding="async">
                     </div>
                     <div class="gallery-card">
-                        <img src="assets/5336-winnetka-pool.jpg" alt="Outdoor Swimming Pool Deck" class="lightbox-trigger" data-caption="5336 Winnetka - Custom In-Ground Swimming Pool Deck, Sun Loungers & Covered Patio Lounge">
+                        <img src="assets/5336-winnetka-pool.webp" alt="Outdoor Swimming Pool Deck" class="lightbox-trigger" data-caption="5336 Winnetka - Custom In-Ground Swimming Pool Deck, Sun Loungers & Covered Patio Lounge" width="600" height="401" loading="lazy" decoding="async">
                     </div>
                     <div class="gallery-card">
-                        <img src="assets/5336-winnetka-office.jpg" alt="Executive Home Office" class="lightbox-trigger" data-caption="5336 Winnetka - Executive Home Office Suite with Vintage Leather Egg Chair & Chrome Desk">
+                        <img src="assets/5336-winnetka-office.webp" alt="Executive Home Office" class="lightbox-trigger" data-caption="5336 Winnetka - Executive Home Office Suite with Vintage Leather Egg Chair & Chrome Desk" width="600" height="401" loading="lazy" decoding="async">
                     </div>
                     <div class="gallery-card">
-                        <img src="assets/5336-winnetka-kitchen.jpg" alt="White Gourmet Kitchen" class="lightbox-trigger" data-caption="5336 Winnetka - White Gourmet Kitchen with Large Marble Island">
+                        <img src="assets/5336-winnetka-kitchen.webp" alt="White Gourmet Kitchen" class="lightbox-trigger" data-caption="5336 Winnetka - White Gourmet Kitchen with Large Marble Island" width="600" height="400" loading="lazy" decoding="async">
                     </div>
                     <div class="gallery-card">
-                        <img src="assets/5336-winnetka-foyer.jpg" alt="Entrance Foyer" class="lightbox-trigger" data-caption="5336 Winnetka - Foyer & Entrance Hallway with Gold Accent Front Door">
+                        <img src="assets/5336-winnetka-foyer.webp" alt="Entrance Foyer" class="lightbox-trigger" data-caption="5336 Winnetka - Foyer & Entrance Hallway with Gold Accent Front Door" width="600" height="400" loading="lazy" decoding="async">
                     </div>
                     <div class="gallery-card">
-                        <img src="assets/5336-winnetka-living.jpg" alt="Living Room" class="lightbox-trigger" data-caption="5336 Winnetka - Curved Sofa Open Concept Living Room at Night">
+                        <img src="assets/5336-winnetka-living.webp" alt="Living Room" class="lightbox-trigger" data-caption="5336 Winnetka - Curved Sofa Open Concept Living Room at Night" width="600" height="402" loading="lazy" decoding="async">
                     </div>
                     <div class="gallery-card">
-                        <img src="assets/5336-winnetka-dining.jpg" alt="Dining Room" class="lightbox-trigger" data-caption="5336 Winnetka - Open Dining Suite & Modern Living Quarters">
+                        <img src="assets/5336-winnetka-dining.webp" alt="Dining Room" class="lightbox-trigger" data-caption="5336 Winnetka - Open Dining Suite & Modern Living Quarters" width="600" height="373" loading="lazy" decoding="async">
                     </div>
                 </div>
             </div>
@@ -154,7 +310,7 @@
                 <div class="info-item"><i class="fa-solid fa-location-dot info-icon"></i><div><span class="info-label">FIND US</span><span class="info-value">1215 Lachman Lane<br>Pacific Palisades, CA 90272</span></div></div>
             </div>
             <div class="footer-cta-right scroll-animate fade-in-right">
-                <div class="footer-logo-wrap"><img src="assets/logo.png" alt="Pacific Remodel and Development logo" class="footer-logo-img"></div>
+                <div class="footer-logo-wrap"><img src="assets/logo.webp" alt="Pacific Remodel and Development logo" class="footer-logo-img" width="180" height="52" fetchpriority="high" decoding="async"></div>
                 <p class="footer-slogan">Locally Owned & Operated in Pacific Palisades</p>
             </div>
         </div>
@@ -167,6 +323,6 @@
     </footer>
 
     <div class="lightbox-modal" id="lightboxModal"><span class="lightbox-close" id="lightboxClose">&times;</span><img class="lightbox-content" id="lightboxImg" alt="Expanded Project Image"><div class="lightbox-caption" id="lightboxCaption"></div></div>
-    <script src="app.js"></script>
+    <script src="app.js" defer></script>
 </body>
 </html>

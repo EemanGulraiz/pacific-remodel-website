@@ -219,8 +219,10 @@ ul {
 }
 
 .logo-img {
-    height: 52px;
-    object-fit: contain;
+    height: 52px !important;
+    width: auto !important;
+    max-width: 200px !important;
+    object-fit: contain !important;
     mix-blend-mode: multiply; /* Eliminates white JPEG box */
 }
 
@@ -2215,7 +2217,119 @@ textarea.form-control {
     .story-highlights-grid {
         grid-template-columns: 1fr;
     }
+}
+
+/* ==========================================================================
+   BEFORE & AFTER TRANSFORMATION SHOWCASE SYSTEM
+   ========================================================================== */
+.before-after-section {
+    padding: 90px 0;
+    background-color: var(--color-white);
+}
+
+.before-after-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 30px;
+    align-items: stretch;
+}
+
+@media (max-width: 768px) {
+    .before-after-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
     }
+}
+
+.ba-card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ba-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+.ba-img-wrap {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background: #0f172a;
+}
+
+.ba-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.ba-card:hover .ba-img-wrap img {
+    transform: scale(1.06);
+}
+
+.ba-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 0.75rem;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 5;
+}
+
+.ba-badge-before {
+    background: #0f172a;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.ba-badge-after {
+    background: #0284c7;
+    color: #ffffff;
+}
+
+.ba-caption {
+    padding: 22px 24px;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.ba-title {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--color-navy);
+    margin-bottom: 6px;
+}
+
+.ba-desc {
+    font-size: 0.9rem;
+    color: var(--color-muted-text);
+    line-height: 1.5;
+    margin: 0;
 }
 
 

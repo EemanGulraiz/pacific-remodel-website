@@ -341,6 +341,78 @@
             color: rgba(255,255,255,0.85);
         }
     </style>
+
+    <!-- Bulletproof Before & After Component Styles -->
+    <style>
+    .before-after-grid {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 30px !important;
+        margin-top: 20px !important;
+        align-items: stretch !important;
+    }
+    .before-after-grid .ba-card {
+        flex: 1 1 calc(50% - 15px) !important;
+        min-width: 280px !important;
+        box-sizing: border-box !important;
+        display: flex !important;
+        flex-direction: column !important;
+        border-radius: 12px !important;
+        overflow: hidden !important;
+        background: #ffffff !important;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.08) !important;
+        border: 1px solid rgba(0,0,0,0.06) !important;
+    }
+    .before-after-grid .ba-img-wrap {
+        width: 100% !important;
+        height: 300px !important;
+        max-height: 300px !important;
+        position: relative !important;
+        overflow: hidden !important;
+        background: #0f172a !important;
+    }
+    .before-after-grid .ba-img-wrap img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: center !important;
+        display: block !important;
+    }
+    .before-after-grid .ba-badge {
+        position: absolute !important;
+        top: 15px !important;
+        left: 15px !important;
+        padding: 6px 14px !important;
+        border-radius: 4px !important;
+        font-family: var(--font-heading), sans-serif !important;
+        font-weight: 800 !important;
+        font-size: 0.75rem !important;
+        letter-spacing: 1.2px !important;
+        text-transform: uppercase !important;
+        color: #ffffff !important;
+        z-index: 5 !important;
+    }
+    .before-after-grid .ba-badge-before {
+        background: #0f172a !important;
+        border: 1px solid rgba(255,255,255,0.25) !important;
+    }
+    .before-after-grid .ba-badge-after {
+        background: #0284c7 !important;
+        color: #ffffff !important;
+    }
+    .before-after-grid .ba-caption {
+        padding: 20px 24px !important;
+        background: #ffffff !important;
+        display: flex !important;
+        flex-direction: column !important;
+        flex-grow: 1 !important;
+    }
+    @media (max-width: 768px) {
+        .before-after-grid .ba-card {
+            flex: 1 1 100% !important;
+        }
+    }
+    </style>
 </head>
 <body>
 
@@ -348,7 +420,7 @@
     <header class="header">
         <div class="header-container">
             <a href="index.html" class="logo-link">
-                <img src="assets/logo.png" alt="Pacific Remodel and Development" class="logo-img">
+                <img src="assets/logo.webp" alt="Pacific Remodel and Development" class="logo-img" width="180" height="52" fetchpriority="high" decoding="async">
             </a>
             
             <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">
@@ -438,75 +510,195 @@
             </div>
 
             <div class="ba-split-card-grid">
-                <!-- Card 1: Bathroom Transformation -->
+                <!-- Card 1: 690 Via Santa Ynez Estate -->
                 <div class="ba-split-card scroll-animate fade-in-up">
                     <div class="ba-split-img-container">
                         <div class="ba-split-badge ba-split-badge-before">BEFORE</div>
                         <div class="ba-split-badge ba-split-badge-after">AFTER</div>
                         <div class="ba-split-img-half">
-                            <img src="assets/viaynez-before-bathroom.jpg" alt="Bathroom Before">
+                            <img src="assets/viaynez-before-exterior.webp" alt="690 Via Santa Ynez Before" width="1024" height="768" loading="lazy" decoding="async">
                         </div>
                         <div class="ba-split-divider"></div>
                         <div class="ba-split-img-half">
-                            <img src="assets/viaynez-after-6.jpg" alt="Bathroom After">
+                            <img src="assets/viaynez-after-1.webp" alt="690 Via Santa Ynez After" width="1600" height="1031" loading="lazy" decoding="async">
                         </div>
                     </div>
                     <div class="ba-split-card-content">
-                        <h3 class="ba-split-card-title">Bathroom Transformation</h3>
-                        <p class="ba-split-card-subtitle">Modern comfort. Timeless style.</p>
+                        <h3 class="ba-split-card-title">690 Via Santa Ynez Estate</h3>
+                        <p class="ba-split-card-subtitle">Ground-up custom modern estate build & structural expansion.</p>
                         <div class="ba-split-card-meta">
-                            <span><i class="fa-solid fa-briefcase"></i> Bathroom Remodel</span>
+                            <span><i class="fa-solid fa-building-user"></i> Custom Build</span>
                             <span><i class="fa-solid fa-location-dot"></i> Pacific Palisades</span>
                         </div>
-                        <a href="project-viaynez.html" class="ba-split-card-link">VIEW PROJECT <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="project-viaynez.html" class="ba-split-card-link">VIEW BEFORE & AFTER <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
 
-                <!-- Card 2: Roof & Exterior Renewal -->
-                <div class="ba-split-card scroll-animate fade-in-up" style="animation-delay: 0.15s;">
+                <!-- Card 2: 452 Bundy Modern Estate -->
+                <div class="ba-split-card scroll-animate fade-in-up" style="animation-delay: 0.1s;">
                     <div class="ba-split-img-container">
                         <div class="ba-split-badge ba-split-badge-before">BEFORE</div>
                         <div class="ba-split-badge ba-split-badge-after">AFTER</div>
                         <div class="ba-split-img-half">
-                            <img src="assets/viaynez-before-exterior.jpg" alt="Exterior Before">
+                            <img src="assets/bundy-before-1.webp" alt="452 Bundy Before" width="1080" height="720" loading="lazy" decoding="async">
                         </div>
                         <div class="ba-split-divider"></div>
                         <div class="ba-split-img-half">
-                            <img src="assets/viaynez-after-1.jpg" alt="Exterior After">
+                            <img src="assets/palisades-front-gate.webp" alt="452 Bundy After" width="600" height="373" loading="lazy" decoding="async">
                         </div>
                     </div>
                     <div class="ba-split-card-content">
-                        <h3 class="ba-split-card-title">Roof & Exterior Renewal</h3>
-                        <p class="ba-split-card-subtitle">Better protection. A lasting first impression.</p>
+                        <h3 class="ba-split-card-title">452 Bundy Modern Estate</h3>
+                        <p class="ba-split-card-subtitle">Whole-home transformation & concrete paver grid grounds.</p>
                         <div class="ba-split-card-meta">
-                            <span><i class="fa-solid fa-briefcase"></i> Roofing & Exterior</span>
-                            <span><i class="fa-solid fa-location-dot"></i> Pacific Palisades</span>
+                            <span><i class="fa-solid fa-house-laptop"></i> Flagship Estate</span>
+                            <span><i class="fa-solid fa-location-dot"></i> Brentwood / Palisades</span>
                         </div>
-                        <a href="project-viaynez.html" class="ba-split-card-link">VIEW PROJECT <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="project-palisades.html" class="ba-split-card-link">VIEW BEFORE & AFTER <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
 
-                <!-- Card 3: Whole-Home Remodel -->
+                <!-- Card 3: 12341 Gorham Culinary Suite -->
+                <div class="ba-split-card scroll-animate fade-in-up" style="animation-delay: 0.2s;">
+                    <div class="ba-split-img-container">
+                        <div class="ba-split-badge ba-split-badge-before">BEFORE</div>
+                        <div class="ba-split-badge ba-split-badge-after">AFTER</div>
+                        <div class="ba-split-img-half">
+                            <img src="assets/gorham-before-skylight.webp" alt="12341 Gorham Before" width="600" height="400" loading="lazy" decoding="async">
+                        </div>
+                        <div class="ba-split-divider"></div>
+                        <div class="ba-split-img-half">
+                            <img src="assets/12341-gorham-kitchen.webp" alt="12341 Gorham After" width="600" height="400" loading="lazy" decoding="async">
+                        </div>
+                    </div>
+                    <div class="ba-split-card-content">
+                        <h3 class="ba-split-card-title">12341 Gorham Culinary Suite</h3>
+                        <p class="ba-split-card-subtitle">Gourmet kitchen overhaul with skylight & marble waterfall island.</p>
+                        <div class="ba-split-card-meta">
+                            <span><i class="fa-solid fa-utensils"></i> Gourmet Kitchen</span>
+                            <span><i class="fa-solid fa-location-dot"></i> Brentwood</span>
+                        </div>
+                        <a href="project-gorham.html" class="ba-split-card-link">VIEW BEFORE & AFTER <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Card 3B: 12337 Gorham Modern Residence -->
+                <div class="ba-split-card scroll-animate fade-in-up" style="animation-delay: 0.25s;">
+                    <div class="ba-split-img-container">
+                        <div class="ba-split-badge ba-split-badge-before">BEFORE</div>
+                        <div class="ba-split-badge ba-split-badge-after">AFTER</div>
+                        <div class="ba-split-img-half">
+                            <img src="assets/gorham12337-before-living.webp" alt="12337 Gorham Before" width="1080" height="771" loading="lazy" decoding="async">
+                        </div>
+                        <div class="ba-split-divider"></div>
+                        <div class="ba-split-img-half">
+                            <img src="assets/gorham12337-after-living.webp" alt="12337 Gorham After" width="500" height="334" loading="lazy" decoding="async">
+                        </div>
+                    </div>
+                    <div class="ba-split-card-content">
+                        <h3 class="ba-split-card-title">12337 Gorham Residence</h3>
+                        <p class="ba-split-card-subtitle">Full interior & exterior residential overhaul & open concept layout.</p>
+                        <div class="ba-split-card-meta">
+                            <span><i class="fa-solid fa-house-user"></i> Full Remodel</span>
+                            <span><i class="fa-solid fa-location-dot"></i> Brentwood</span>
+                        </div>
+                        <a href="project-gorham12337.html" class="ba-split-card-link">VIEW BEFORE & AFTER <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Card: 4045 Jackson Remodel Residence -->
                 <div class="ba-split-card scroll-animate fade-in-up" style="animation-delay: 0.3s;">
                     <div class="ba-split-img-container">
                         <div class="ba-split-badge ba-split-badge-before">BEFORE</div>
                         <div class="ba-split-badge ba-split-badge-after">AFTER</div>
                         <div class="ba-split-img-half">
-                            <img src="assets/viaynez-before-framing.jpg" alt="Framing Before">
+                            <img src="assets/jackson-before-framing2.webp" alt="4045 Jackson Before" width="768" height="1024" loading="lazy" decoding="async">
                         </div>
                         <div class="ba-split-divider"></div>
                         <div class="ba-split-img-half">
-                            <img src="assets/viaynez-after-3.jpg" alt="Vaulted Living After">
+                            <img src="assets/jackson4045-after-1.webp" alt="4045 Jackson After" width="500" height="334" loading="lazy" decoding="async">
                         </div>
                     </div>
                     <div class="ba-split-card-content">
-                        <h3 class="ba-split-card-title">Whole-Home Remodel</h3>
-                        <p class="ba-split-card-subtitle">From outdated to extraordinary.</p>
+                        <h3 class="ba-split-card-title">4045 Jackson Residence</h3>
+                        <p class="ba-split-card-subtitle">Major interior & exterior residential overhaul & open concept layout.</p>
                         <div class="ba-split-card-meta">
-                            <span><i class="fa-solid fa-briefcase"></i> Full Home Remodel</span>
-                            <span><i class="fa-solid fa-location-dot"></i> Pacific Palisades</span>
+                            <span><i class="fa-solid fa-hammer"></i> Major Remodel</span>
+                            <span><i class="fa-solid fa-location-dot"></i> Culver City</span>
                         </div>
-                        <a href="project-viaynez.html" class="ba-split-card-link">VIEW PROJECT <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="project-jackson4045.html" class="ba-split-card-link">VIEW BEFORE & AFTER <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Card: Ipanema Luxury Residence Remodel -->
+                <div class="ba-split-card scroll-animate fade-in-up" style="animation-delay: 0.35s;">
+                    <div class="ba-split-img-container">
+                        <div class="ba-split-badge ba-split-badge-before">BEFORE</div>
+                        <div class="ba-split-badge ba-split-badge-after">AFTER</div>
+                        <div class="ba-split-img-half">
+                            <img src="assets/ipanema-before-living.webp" alt="Ipanema Residence Before" width="739" height="997" loading="lazy" decoding="async">
+                        </div>
+                        <div class="ba-split-divider"></div>
+                        <div class="ba-split-img-half">
+                            <img src="assets/ipanema-after-living.webp" alt="Ipanema Residence After" width="690" height="493" loading="lazy" decoding="async">
+                        </div>
+                    </div>
+                    <div class="ba-split-card-content">
+                        <h3 class="ba-split-card-title">Ipanema Residence Remodel</h3>
+                        <p class="ba-split-card-subtitle">Ultra-luxury coastal villa remodel & open-concept oceanview suite.</p>
+                        <div class="ba-split-card-meta">
+                            <span><i class="fa-solid fa-water"></i> Coastal Remodel</span>
+                            <span><i class="fa-solid fa-location-dot"></i> Rio de Janeiro, Brazil</span>
+                        </div>
+                        <a href="project-ipanema.html" class="ba-split-card-link">VIEW BEFORE & AFTER <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Card 5: 5336 Winnetka Estate & Pool Deck -->
+                <div class="ba-split-card scroll-animate fade-in-up" style="animation-delay: 0.4s;">
+                    <div class="ba-split-img-container">
+                        <div class="ba-split-badge ba-split-badge-before">BEFORE</div>
+                        <div class="ba-split-badge ba-split-badge-after">AFTER</div>
+                        <div class="ba-split-img-half">
+                            <img src="assets/winnetka-before-front.webp" alt="5336 Winnetka Front Before" width="1024" height="768" loading="lazy" decoding="async">
+                        </div>
+                        <div class="ba-split-divider"></div>
+                        <div class="ba-split-img-half">
+                            <img src="assets/5336-winnetka-front.webp" alt="5336 Winnetka Front After" width="600" height="369" loading="lazy" decoding="async">
+                        </div>
+                    </div>
+                    <div class="ba-split-card-content">
+                        <h3 class="ba-split-card-title">5336 Winnetka Estate & Pool</h3>
+                        <p class="ba-split-card-subtitle">Whole-home remodel, covered outdoor lounge & in-ground pool deck.</p>
+                        <div class="ba-split-card-meta">
+                            <span><i class="fa-solid fa-water-ladder"></i> Pool & Remodel</span>
+                            <span><i class="fa-solid fa-location-dot"></i> Woodland Hills</span>
+                        </div>
+                        <a href="project-winnetka.html" class="ba-split-card-link">VIEW BEFORE & AFTER <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            
+                <!-- Card 6: 4225 Lincoln Modern Residence -->
+                <div class="ba-split-card scroll-animate fade-in-up" style="animation-delay: 0.5s;">
+                    <div class="ba-split-img-container">
+                        <div class="ba-split-badge ba-split-badge-before">BEFORE</div>
+                        <div class="ba-split-badge ba-split-badge-after">AFTER</div>
+                        <div class="ba-split-img-half">
+                            <img src="assets/lincoln-before-kitchen.webp" alt="4225 Lincoln Before Kitchen" width="500" height="334" loading="lazy" decoding="async">
+                        </div>
+                        <div class="ba-split-divider"></div>
+                        <div class="ba-split-img-half">
+                            <img src="assets/lincoln-after-kitchen.webp" alt="4225 Lincoln After Kitchen" width="500" height="334" loading="lazy" decoding="async">
+                        </div>
+                    </div>
+                    <div class="ba-split-card-content">
+                        <h3 class="ba-split-card-title">4225 Lincoln Residence</h3>
+                        <p class="ba-split-card-subtitle">Full structural gut renovation, quartz chef kitchen & spa bath.</p>
+                        <div class="ba-split-card-meta">
+                            <span><i class="fa-solid fa-hammer"></i> Gut Remodel</span>
+                            <span><i class="fa-solid fa-location-dot"></i> Los Angeles</span>
+                        </div>
+                        <a href="project-lincoln.html" class="ba-split-card-link">VIEW BEFORE & AFTER <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -591,7 +783,7 @@
                 <div class="info-item"><i class="fa-solid fa-location-dot info-icon"></i><div><span class="info-label">FIND US</span><span class="info-value">1215 Lachman Lane<br>Pacific Palisades, CA 90272</span></div></div>
             </div>
             <div class="footer-cta-right scroll-animate fade-in-right">
-                <div class="footer-logo-wrap"><img src="assets/logo.png" alt="Pacific Remodel and Development logo" class="footer-logo-img"></div>
+                <div class="footer-logo-wrap"><img src="assets/logo.webp" alt="Pacific Remodel and Development logo" class="footer-logo-img" width="180" height="52" fetchpriority="high" decoding="async"></div>
                 <p class="footer-slogan">Locally Owned & Operated in Pacific Palisades</p>
             </div>
         </div>
@@ -603,7 +795,7 @@
         </div>
     </footer>
 
-    <script src="app.js"></script>
+    <script src="app.js" defer></script>
     <script>
         // Interactive Slider Drag Logic
         function setupSlider(widgetId, clipId, handleId) {

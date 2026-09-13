@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>4045 Jackson Modern Residence | Project Case Study | Pacific Remodel & Development</title>
-    <meta name="description" content="Case study of 4045 Jackson Ave in Culver City: Deep teal high-gloss gourmet kitchen, commercial range mantle, contemporary bathroom, & garden views.">
+    <title>4045 1/2 Jackson Modern Residence | Project Case Study | Pacific Remodel & Development</title>
+    <meta name="description" content="Case study of 4045 1/2 Jackson Ave in Culver City: Ground-up custom new construction featuring deep teal high-gloss gourmet kitchen, commercial range mantle, contemporary bathroom, & garden views.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -17,34 +17,91 @@
         .meta-label { font-family: var(--font-heading); font-weight: 700; color: var(--color-navy); text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.5px; }
         .meta-value { color: var(--color-muted-text); font-weight: 600; text-align: right; }
         .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; margin-top: 40px; }
-        .gallery-card { position: relative; border-radius: 8px; overflow: hidden; height: 300px; box-shadow: 0 10px 25px rgba(0,0,0,0.08); cursor: pointer; }
+        .gallery-card { position: relative; border-radius: 8px; overflow: hidden; height: 280px; box-shadow: 0 10px 25px rgba(0,0,0,0.08); cursor: pointer; }
         .gallery-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
         .gallery-card:hover img { transform: scale(1.08); }
+        .gallery-badge { position: absolute; top: 12px; left: 12px; padding: 4px 10px; border-radius: 4px; font-family: var(--font-heading); font-weight: 800; font-size: 0.65rem; letter-spacing: 1px; text-transform: uppercase; color: #fff; z-index: 2; background: #0284c7; }
         @media (max-width: 992px) { .gallery-grid { grid-template-columns: repeat(2, 1fr); } }
         @media (max-width: 600px) { .gallery-grid { grid-template-columns: 1fr; } }
     </style>
-    <!-- Canonical URL -->
+    <!-- Feature Highlight Component Styles -->
+    <style>
+    .features-highlight-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 30px !important;
+        margin-top: 20px !important;
+    }
+    .features-highlight-grid .fh-card {
+        box-sizing: border-box !important;
+        display: flex !important;
+        flex-direction: column !important;
+        border-radius: 12px !important;
+        overflow: hidden !important;
+        background: #ffffff !important;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.08) !important;
+        border: 1px solid rgba(0,0,0,0.06) !important;
+    }
+    .features-highlight-grid .fh-img-wrap {
+        width: 100% !important;
+        height: 320px !important;
+        position: relative !important;
+        overflow: hidden !important;
+        background: #0f172a !important;
+    }
+    .features-highlight-grid .fh-img-wrap img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: center !important;
+        display: block !important;
+        transition: transform 0.5s ease !important;
+    }
+    .features-highlight-grid .fh-card:hover .fh-img-wrap img {
+        transform: scale(1.05) !important;
+    }
+    .features-highlight-grid .fh-caption {
+        padding: 24px !important;
+        background: #ffffff !important;
+        display: flex !important;
+        flex-direction: column !important;
+        flex-grow: 1 !important;
+    }
+    .features-highlight-grid .fh-title {
+        font-family: var(--font-heading) !important;
+        font-size: 1.15rem !important;
+        font-weight: 700 !important;
+        color: var(--color-navy) !important;
+        margin-bottom: 8px !important;
+    }
+    .features-highlight-grid .fh-desc {
+        font-size: 0.9rem !important;
+        color: var(--color-muted-text) !important;
+        line-height: 1.55 !important;
+    }
+    @media (max-width: 768px) {
+        .features-highlight-grid {
+            grid-template-columns: 1fr !important;
+        }
+    }
+    </style>
     <link rel="canonical" href="https://pacificremodel.us/project-jackson.html">
-
-    <!-- Open Graph / Facebook / LinkedIn Meta Tags -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pacificremodel.us/project-jackson.html">
-    <meta property="og:title" content="4045 Jackson Modern Residence | Project Case Study | Pacific Remodel & Development">
-    <meta property="og:description" content="Case study of 4045 Jackson Ave in Culver City: Deep teal high-gloss gourmet kitchen, commercial range mantle, contemporary bathroom, & garden views.">
-    <meta property="og:image" content="https://pacificremodel.us/assets/4045-jackson-kitchen.jpg">
+    <meta property="og:title" content="4045 1/2 Jackson Modern Residence | Project Case Study | Pacific Remodel & Development">
+    <meta property="og:description" content="Case study of 4045 1/2 Jackson Ave in Culver City: Ground-up custom new construction featuring deep teal high-gloss gourmet kitchen, commercial range mantle, contemporary bathroom, & garden views.">
+    <meta property="og:image" content="https://pacificremodel.us/assets/jackson-kitchen-after-correct.webp">
     <meta property="og:site_name" content="Pacific Remodel and Development">
-
-    <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://pacificremodel.us/project-jackson.html">
-    <meta name="twitter:title" content="4045 Jackson Modern Residence | Project Case Study | Pacific Remodel & Development">
-    <meta name="twitter:description" content="Case study of 4045 Jackson Ave in Culver City: Deep teal high-gloss gourmet kitchen, commercial range mantle, contemporary bathroom, & garden views.">
-    <meta name="twitter:image" content="https://pacificremodel.us/assets/4045-jackson-kitchen.jpg">
+    <meta name="twitter:title" content="4045 1/2 Jackson Modern Residence | Project Case Study | Pacific Remodel & Development">
+    <meta name="twitter:description" content="Case study of 4045 1/2 Jackson Ave in Culver City: Ground-up custom new construction featuring deep teal high-gloss gourmet kitchen, commercial range mantle, contemporary bathroom, & garden views.">
+    <meta name="twitter:image" content="https://pacificremodel.us/assets/jackson-kitchen-after-correct.webp">
 </head>
 <body>
     <header class="header">
         <div class="header-container">
-            <a href="index.html" class="logo-link"><img src="assets/logo.png" alt="Pacific Remodel" class="logo-img"></a>
+            <a href="index.html" class="logo-link"><img src="assets/logo.webp" alt="Pacific Remodel" class="logo-img" width="180" height="52" fetchpriority="high" decoding="async"></a>
             <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
             <nav class="nav" id="navMenu">
                 <ul class="nav-list">
@@ -80,10 +137,10 @@
                 <div class="breadcrumb">
                     <a href="index.html">Home</a> <span class="breadcrumb-separator"><i class="fa-solid fa-chevron-right"></i></span>
                     <a href="projects.html">Projects</a> <span class="breadcrumb-separator"><i class="fa-solid fa-chevron-right"></i></span>
-                    <span>4045 Jackson Modern Residence</span>
+                    <span>4045 1/2 Jackson Modern Residence</span>
                 </div>
-                <h1 class="subpage-title">4045 JACKSON MODERN RESIDENCE</h1>
-                <p class="subpage-subtitle">High-end major remodel featuring custom deep teal high-gloss kitchen cabinetry, stainless steel commercial range mantle, warm hardwood floors, and seamless garden views.</p>
+                <h1 class="subpage-title">4045 1/2 JACKSON MODERN RESIDENCE</h1>
+                <p class="subpage-subtitle">Ground-up custom new construction residence in Culver City featuring custom deep teal high-gloss kitchen cabinetry, commercial range mantle, warm hardwood floors, and seamless garden views.</p>
             </div>
         </div>
     </section>
@@ -94,42 +151,91 @@
                 <div class="scroll-animate fade-in-left">
                     <span class="section-tag">PROJECT CASE STUDY</span>
                     <h2 class="section-title">PROJECT VISION & EXECUTION</h2>
-                    <p class="section-desc" style="margin-bottom: 20px;">Located at 4045 Jackson Ave, Culver City, California, this complete major remodel focused on opening up the living floorplan while introducing striking modern color palettes and high-end culinary fixtures.</p>
-                    <p class="section-desc" style="margin-bottom: 25px;">The architectural scope included installing custom high-gloss deep teal kitchen cabinetry with gold-accent hardware, a commercial stainless steel range mantle, a glass dining suite, a contemporary primary bathroom vanity, and expansive garden view windows.</p>
+                    <p class="section-desc" style="margin-bottom: 20px;">Located at 4045 1/2 Jackson Ave, Culver City, California, this ground-up new construction modern residence combines open-concept architectural planning with rich interior finish selections.</p>
+                    <p class="section-desc" style="margin-bottom: 25px;">The custom build features high-gloss deep teal kitchen cabinetry with gold-accent hardware, a commercial stainless steel range mantle, wide-plank hardwood flooring, contemporary bathroom vanities, and expansive garden view windows that fill every living space with natural light.</p>
                 </div>
                 <div class="scroll-animate fade-in-right">
                     <div class="project-meta-card">
                         <h3 style="font-size: 1.3rem; font-weight: 800; color: var(--color-navy); margin-bottom: 20px; text-transform: uppercase;">PROJECT SPECIFICATIONS</h3>
-                        <div class="meta-item"><span class="meta-label"><i class="fa-solid fa-location-dot" style="color: var(--color-slate-blue);"></i> Location</span><span class="meta-value">4045 Jackson Ave, Culver City, CA</span></div>
-                        <div class="meta-item"><span class="meta-label"><i class="fa-solid fa-hammer" style="color: var(--color-slate-blue);"></i> Project Scope</span><span class="meta-value">Major Home Remodel & Kitchen Overhaul</span></div>
+                        <div class="meta-item"><span class="meta-label"><i class="fa-solid fa-location-dot" style="color: var(--color-slate-blue);"></i> Location</span><span class="meta-value">4045 1/2 Jackson Ave, Culver City, CA</span></div>
+                        <div class="meta-item"><span class="meta-label"><i class="fa-solid fa-hammer" style="color: var(--color-slate-blue);"></i> Project Scope</span><span class="meta-value">Custom New Construction Build</span></div>
                         <div class="meta-item"><span class="meta-label"><i class="fa-solid fa-building" style="color: var(--color-slate-blue);"></i> General Contractor</span><span class="meta-value">Pacific Remodel and Development</span></div>
                         <div class="meta-item"><span class="meta-label"><i class="fa-solid fa-id-card" style="color: var(--color-slate-blue);"></i> License</span><span class="meta-value">Lic. #1111456</span></div>
                     </div>
                 </div>
             </div>
 
+            <!-- ARCHITECTURAL HIGHLIGHTS & FEATURES -->
+            <div style="margin-top: 70px;" class="scroll-animate fade-in-up">
+                <div class="text-center" style="text-align: center; max-width: 750px; margin: 0 auto 40px;">
+                    <span class="section-tag">NEW CONSTRUCTION SHOWCASE</span>
+                    <h2 class="section-title">4045 1/2 JACKSON ARCHITECTURAL HIGHLIGHTS</h2>
+                    <p class="section-desc">Explore key design features, custom millwork, and exterior detailing crafted by Pacific Remodel and Development.</p>
+                </div>
+
+                <div class="features-highlight-grid">
+                    <!-- Feature 1: Teal Gourmet Kitchen -->
+                    <div class="fh-card">
+                        <div class="fh-img-wrap">
+                            <img src="assets/jackson-kitchen-after-correct.webp" alt="Teal Gourmet Kitchen" class="lightbox-trigger" data-caption="4045 1/2 Jackson - Open Concept Modern Kitchen with High-Gloss Deep Teal Cabinetry & Glass Dining Table" width="456" height="340" loading="lazy" decoding="async">
+                        </div>
+                        <div class="fh-caption">
+                            <h4 class="fh-title">Gourmet Teal High-Gloss Kitchen</h4>
+                            <p class="fh-desc">High-gloss deep teal cabinetry, gold-accent hardware, commercial stainless range hood, hardwood flooring, and glass dining suite.</p>
+                        </div>
+                    </div>
+
+                    <!-- Feature 2: Light-Filled Living Suite -->
+                    <div class="fh-card">
+                        <div class="fh-img-wrap">
+                            <img src="assets/jackson-after-living1.webp" alt="Modern Foyer Entrance" class="lightbox-trigger" data-caption="4045 1/2 Jackson - Completed Modern Living Room Suite with Hardwood Floors & Designer Lighting" width="600" height="400" loading="lazy" decoding="async">
+                        </div>
+                        <div class="fh-caption">
+                            <h4 class="fh-title">Light-Filled Modern Living Area</h4>
+                            <p class="fh-desc">Seamless open living layout with wide-plank hardwood floors, recessed lighting, and custom wall finishes.</p>
+                        </div>
+                    </div>
+
+                    <!-- Feature 3: Contemporary Vanity & Bath -->
+                    <div class="fh-card">
+                        <div class="fh-img-wrap">
+                            <img src="assets/4045-jackson-kitchen.webp" alt="Contemporary Bathroom Vanity" class="lightbox-trigger" data-caption="4045 1/2 Jackson - Contemporary Bathroom Vanity with Wood Countertop & Integrated Laundry Nook" width="600" height="405" loading="lazy" decoding="async">
+                        </div>
+                        <div class="fh-caption">
+                            <h4 class="fh-title">Contemporary Bathroom & Vanity</h4>
+                            <p class="fh-desc">Custom wood vanity countertop, minimalist mirror, polished chrome fixtures, and hidden laundry unit nook.</p>
+                        </div>
+                    </div>
+
+                    <!-- Feature 4: Porch & Exterior Grounds -->
+                    <div class="fh-card">
+                        <div class="fh-img-wrap">
+                            <img src="assets/4045-jackson-porch.webp" alt="Front Porch & Landscaping" class="lightbox-trigger" data-caption="4045 1/2 Jackson - Covered Porch Entrance with Exposed Rafters & River Rock Landscaping" width="403" height="600" loading="lazy" decoding="async">
+                        </div>
+                        <div class="fh-caption">
+                            <h4 class="fh-title">Craftsman Porch & Garden Grounds</h4>
+                            <p class="fh-desc">Covered entrance porch with dark exposed wooden rafters, river rock garden borders, and manicured green lawn.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CURATED PHOTO GALLERY -->
             <div style="margin-top: 80px;">
-                <span class="section-tag">AUTHENTIC PROJECT GALLERY</span>
-                <h2 class="section-title">4045 JACKSON MODERN RESIDENCE PHOTO GALLERY</h2>
+                <span class="section-tag">RESIDENTIAL GALLERY</span>
+                <h2 class="section-title">4045 1/2 JACKSON PHOTO GALLERY</h2>
                 <div class="gallery-grid scroll-animate fade-in-up">
-                    <div class="gallery-card">
-                        <img src="assets/4045-jackson-kitchen.jpg" alt="Teal Gourmet Kitchen" class="lightbox-trigger" data-caption="4045 Jackson - Open Concept Modern Kitchen with Deep Teal Gloss Cabinetry & Glass Dining Suite">
-                    </div>
-                    <div class="gallery-card">
-                        <img src="assets/4045-jackson-entryway.jpg" alt="Entryway & Garden View" class="lightbox-trigger" data-caption="4045 Jackson - Foyer Entrance with Root Wood Console Table & View to Outdoor Garden Lawn">
-                    </div>
-                    <div class="gallery-card">
-                        <img src="assets/4045-jackson-porch.jpg" alt="Front Entrance Porch" class="lightbox-trigger" data-caption="4045 Jackson - Front Entrance Porch with Exposed Dark Roof Rafters & River Rock Landscaping">
-                    </div>
-                    <div class="gallery-card">
-                        <img src="assets/4045-jackson-bath.jpg" alt="Contemporary Bath" class="lightbox-trigger" data-caption="4045 Jackson - Contemporary Bathroom Vanity with Wood Countertop & Laundry Nook">
-                    </div>
-                    <div class="gallery-card">
-                        <img src="assets/4045-jackson-bedroom.jpg" alt="Master Bedroom" class="lightbox-trigger" data-caption="4045 Jackson - Master Bedroom Suite with Tufted Headboard & Wood Accent Windows">
-                    </div>
-                    <div class="gallery-card">
-                        <img src="assets/4045-jackson-gardenview.jpg" alt="Garden View Kitchen" class="lightbox-trigger" data-caption="4045 Jackson - Kitchen View Opening to Lush Garden Patio Windows">
-                    </div>
+                    <div class="gallery-card"><span class="gallery-badge">COMPLETED</span><img src="assets/jackson-kitchen-after-correct.webp" alt="Teal Gourmet Kitchen" class="lightbox-trigger" data-caption="4045 1/2 Jackson - Deep Teal High-Gloss Gourmet Kitchen" width="456" height="340" loading="lazy" decoding="async"></div>
+                    <div class="gallery-card"><span class="gallery-badge">COMPLETED</span><img src="assets/jackson-after-living1.webp" alt="Living Suite" class="lightbox-trigger" data-caption="4045 1/2 Jackson - Living Room & Hardwood Floors" width="600" height="400" loading="lazy" decoding="async"></div>
+                    <div class="gallery-card"><span class="gallery-badge">COMPLETED</span><img src="assets/jackson-after-living2.webp" alt="Living Suite Angle 2" class="lightbox-trigger" data-caption="4045 1/2 Jackson - Living Room View 2" width="500" height="334" loading="lazy" decoding="async"></div>
+                    <div class="gallery-card"><span class="gallery-badge">COMPLETED</span><img src="assets/jackson-after-new1.webp" alt="Interior View 1" class="lightbox-trigger" data-caption="4045 1/2 Jackson - Completed Modern Interior Suite 1" width="500" height="334" loading="lazy" decoding="async"></div>
+                    <div class="gallery-card"><span class="gallery-badge">COMPLETED</span><img src="assets/jackson-after-new2.webp" alt="Interior View 2" class="lightbox-trigger" data-caption="4045 1/2 Jackson - Completed Modern Interior Suite 2" width="500" height="334" loading="lazy" decoding="async"></div>
+                    <div class="gallery-card"><span class="gallery-badge">COMPLETED</span><img src="assets/jackson-after-new3.webp" alt="Interior View 3" class="lightbox-trigger" data-caption="4045 1/2 Jackson - Completed Modern Interior Suite 3" width="500" height="334" loading="lazy" decoding="async"></div>
+                    <div class="gallery-card"><span class="gallery-badge">COMPLETED</span><img src="assets/4045-jackson-entryway.webp" alt="Entryway & Garden View" class="lightbox-trigger" data-caption="4045 1/2 Jackson - Foyer Entrance & Garden View" width="600" height="400" loading="lazy" decoding="async"></div>
+                    <div class="gallery-card"><span class="gallery-badge">COMPLETED</span><img src="assets/4045-jackson-porch.webp" alt="Front Entrance Porch" class="lightbox-trigger" data-caption="4045 1/2 Jackson - Front Entrance Porch & Exposed Rafters" width="403" height="600" loading="lazy" decoding="async"></div>
+                    <div class="gallery-card"><span class="gallery-badge">COMPLETED</span><img src="assets/4045-jackson-kitchen.webp" alt="Contemporary Bath" class="lightbox-trigger" data-caption="4045 1/2 Jackson - Contemporary Bathroom Vanity & Laundry Nook" width="600" height="405" loading="lazy" decoding="async"></div>
+                    <div class="gallery-card"><span class="gallery-badge">COMPLETED</span><img src="assets/4045-jackson-bedroom.webp" alt="Primary Bedroom" class="lightbox-trigger" data-caption="4045 1/2 Jackson - Primary Bedroom Suite" width="600" height="400" loading="lazy" decoding="async"></div>
+                    <div class="gallery-card"><span class="gallery-badge">COMPLETED</span><img src="assets/4045-jackson-gardenview.webp" alt="Garden View Kitchen" class="lightbox-trigger" data-caption="4045 1/2 Jackson - Kitchen View Opening to Garden Windows" width="600" height="400" loading="lazy" decoding="async"></div>
                 </div>
             </div>
         </div>
@@ -151,7 +257,7 @@
                 <div class="info-item"><i class="fa-solid fa-location-dot info-icon"></i><div><span class="info-label">FIND US</span><span class="info-value">1215 Lachman Lane<br>Pacific Palisades, CA 90272</span></div></div>
             </div>
             <div class="footer-cta-right scroll-animate fade-in-right">
-                <div class="footer-logo-wrap"><img src="assets/logo.png" alt="Pacific Remodel and Development logo" class="footer-logo-img"></div>
+                <div class="footer-logo-wrap"><img src="assets/logo.webp" alt="Pacific Remodel and Development logo" class="footer-logo-img" width="180" height="52" fetchpriority="high" decoding="async"></div>
                 <p class="footer-slogan">Locally Owned & Operated in Pacific Palisades</p>
             </div>
         </div>
@@ -164,6 +270,6 @@
     </footer>
 
     <div class="lightbox-modal" id="lightboxModal"><span class="lightbox-close" id="lightboxClose">&times;</span><img class="lightbox-content" id="lightboxImg" alt="Expanded Project Image"><div class="lightbox-caption" id="lightboxCaption"></div></div>
-    <script src="app.js"></script>
+    <script src="app.js" defer></script>
 </body>
 </html>

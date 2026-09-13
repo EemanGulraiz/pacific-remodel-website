@@ -17,34 +17,115 @@
         .meta-label { font-family: var(--font-heading); font-weight: 700; color: var(--color-navy); text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.5px; }
         .meta-value { color: var(--color-muted-text); font-weight: 600; text-align: right; }
         .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; margin-top: 40px; }
-        .gallery-card { position: relative; border-radius: 8px; overflow: hidden; height: 300px; box-shadow: 0 10px 25px rgba(0,0,0,0.08); cursor: pointer; }
+        .gallery-card { position: relative; border-radius: 8px; overflow: hidden; height: 280px; box-shadow: 0 10px 25px rgba(0,0,0,0.08); cursor: pointer; }
         .gallery-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
         .gallery-card:hover img { transform: scale(1.08); }
+        .gallery-badge { position: absolute; top: 12px; left: 12px; padding: 4px 10px; border-radius: 4px; font-family: var(--font-heading); font-weight: 800; font-size: 0.65rem; letter-spacing: 1px; text-transform: uppercase; color: #fff; z-index: 2; }
+        .badge-before { background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(255,255,255,0.2); }
+        .badge-after { background: #0284c7; }
         @media (max-width: 992px) { .gallery-grid { grid-template-columns: repeat(2, 1fr); } }
         @media (max-width: 600px) { .gallery-grid { grid-template-columns: 1fr; } }
     </style>
-    <!-- Canonical URL -->
+    <!-- Bulletproof Before & After Component Styles -->
+    <style>
+    .before-after-grid {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 30px !important;
+        margin-top: 20px !important;
+        align-items: stretch !important;
+    }
+    .before-after-grid .ba-card {
+        flex: 1 1 calc(50% - 15px) !important;
+        min-width: 280px !important;
+        box-sizing: border-box !important;
+        display: flex !important;
+        flex-direction: column !important;
+        border-radius: 12px !important;
+        overflow: hidden !important;
+        background: #ffffff !important;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.08) !important;
+        border: 1px solid rgba(0,0,0,0.06) !important;
+    }
+    .before-after-grid .ba-img-wrap {
+        width: 100% !important;
+        height: 300px !important;
+        max-height: 300px !important;
+        position: relative !important;
+        overflow: hidden !important;
+        background: #0f172a !important;
+    }
+    .before-after-grid .ba-img-wrap img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: center !important;
+        display: block !important;
+    }
+    .before-after-grid .ba-badge {
+        position: absolute !important;
+        top: 15px !important;
+        left: 15px !important;
+        padding: 6px 14px !important;
+        border-radius: 4px !important;
+        font-family: var(--font-heading), sans-serif !important;
+        font-weight: 800 !important;
+        font-size: 0.75rem !important;
+        letter-spacing: 1.2px !important;
+        text-transform: uppercase !important;
+        color: #ffffff !important;
+        z-index: 5 !important;
+    }
+    .before-after-grid .ba-badge-before {
+        background: #0f172a !important;
+        border: 1px solid rgba(255,255,255,0.25) !important;
+    }
+    .before-after-grid .ba-badge-after {
+        background: #0284c7 !important;
+        color: #ffffff !important;
+    }
+    .before-after-grid .ba-caption {
+        padding: 20px 24px !important;
+        background: #ffffff !important;
+        display: flex !important;
+        flex-direction: column !important;
+        flex-grow: 1 !important;
+    }
+    .before-after-grid .ba-title {
+        font-family: var(--font-heading) !important;
+        font-size: 1.1rem !important;
+        font-weight: 700 !important;
+        color: var(--color-navy) !important;
+        margin-bottom: 6px !important;
+    }
+    .before-after-grid .ba-desc {
+        font-size: 0.9rem !important;
+        color: var(--color-muted-text) !important;
+        line-height: 1.5 !important;
+    }
+    @media (max-width: 768px) {
+        .before-after-grid .ba-card {
+            flex: 1 1 100% !important;
+        }
+    }
+    </style>
     <link rel="canonical" href="https://pacificremodel.us/project-gorham.html">
-
-    <!-- Open Graph / Facebook / LinkedIn Meta Tags -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pacificremodel.us/project-gorham.html">
     <meta property="og:title" content="12341 Gorham Culinary Suite | Project Case Study | Pacific Remodel & Development">
     <meta property="og:description" content="Case study of 12341 Gorham Ave in Brentwood: Gourmet skylight kitchen, navy blue accent millwork, marble waterfall island, & spa bath shower.">
-    <meta property="og:image" content="https://pacificremodel.us/assets/12341-gorham-kitchen.jpg">
+    <meta property="og:image" content="https://pacificremodel.us/assets/12341-gorham-kitchen.webp">
     <meta property="og:site_name" content="Pacific Remodel and Development">
-
-    <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://pacificremodel.us/project-gorham.html">
     <meta name="twitter:title" content="12341 Gorham Culinary Suite | Project Case Study | Pacific Remodel & Development">
     <meta name="twitter:description" content="Case study of 12341 Gorham Ave in Brentwood: Gourmet skylight kitchen, navy blue accent millwork, marble waterfall island, & spa bath shower.">
-    <meta name="twitter:image" content="https://pacificremodel.us/assets/12341-gorham-kitchen.jpg">
+    <meta name="twitter:image" content="https://pacificremodel.us/assets/12341-gorham-kitchen.webp">
 </head>
 <body>
     <header class="header">
         <div class="header-container">
-            <a href="index.html" class="logo-link"><img src="assets/logo.png" alt="Pacific Remodel" class="logo-img"></a>
+            <a href="index.html" class="logo-link"><img src="assets/logo.webp" alt="Pacific Remodel" class="logo-img" width="180" height="52" fetchpriority="high" decoding="async"></a>
             <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
             <nav class="nav" id="navMenu">
                 <ul class="nav-list">
@@ -83,7 +164,7 @@
                     <span>12341 Gorham Culinary Suite</span>
                 </div>
                 <h1 class="subpage-title">12341 GORHAM CULINARY SUITE</h1>
-                <p class="subpage-subtitle">Modern gourmet kitchen and interior overhaul featuring overhead architectural skylight, navy blue accent drawers, marble waterfall island, and marble spa bath suite.</p>
+                <p class="subpage-subtitle">Modern gourmet kitchen and interior overhaul featuring overhead architectural skylight, navy blue accent millwork, marble waterfall island, and marble spa bath suite.</p>
             </div>
         </div>
     </section>
@@ -108,28 +189,106 @@
                 </div>
             </div>
 
+            <!-- BEFORE & AFTER TRANSFORMATION COMPARISONS -->
+            <div style="margin-top: 70px;" class="scroll-animate fade-in-up">
+                <div class="text-center" style="text-align: center; max-width: 750px; margin: 0 auto 40px;">
+                    <span class="section-tag">BEFORE & AFTER TRANSFORMATION</span>
+                    <h2 class="section-title">12341 GORHAM REMODEL COMPARISON</h2>
+                    <p class="section-desc">Compare original roof truss framing, raw skylight cutouts, and asphalt alleyways against the completed culinary residence by Pacific Remodel and Development.</p>
+                </div>
+
+                <!-- Pair 1: Gourmet Kitchen Skylight -->
+                <h3 style="font-size: 1.2rem; font-weight: 800; color: var(--color-navy); margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.5px;"><i class="fa-solid fa-kitchen-set" style="color: var(--color-slate-blue);"></i> 1. SKYLIGHT GOURMET KITCHEN OVERHAUL</h3>
+                <div class="before-after-grid" style="margin-top: 0; margin-bottom: 50px;">
+                    <div class="ba-card">
+                        <span class="ba-badge ba-badge-before">BEFORE • SKYLIGHT FRAMING</span>
+                        <div class="ba-img-wrap">
+                            <img src="assets/gorham-before-skylight.webp" alt="Original Skylight Framing Before" class="lightbox-trigger" data-caption="12341 Gorham - Roof Truss Cutout & Skylight Framing Phase" width="600" height="400" loading="lazy" decoding="async">
+                        </div>
+                        <div class="ba-caption">
+                            <h4 class="ba-title">Structural Skylight Cutout Phase</h4>
+                            <p class="ba-desc">Raw roof truss framing, exposed plywood ceiling, and structural skylight rough-in.</p>
+                        </div>
+                    </div>
+                    <div class="ba-card">
+                        <span class="ba-badge ba-badge-after">AFTER • SUNLIT CHEF KITCHEN</span>
+                        <div class="ba-img-wrap">
+                            <img src="assets/12341-gorham-kitchen.webp" alt="Completed Gourmet Kitchen After" class="lightbox-trigger" data-caption="12341 Gorham - Completed Gourmet Chef Kitchen with Architectural Glass Skylight & Marble Island" width="600" height="400" loading="lazy" decoding="async">
+                        </div>
+                        <div class="ba-caption">
+                            <h4 class="ba-title">Sunlit Gourmet Kitchen & Marble Island</h4>
+                            <p class="ba-desc">Architectural glass skylight, navy blue accent drawers, white quartz countertops, and marble waterfall island.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pair 2: Living Room & Structural Roof Joists -->
+                <h3 style="font-size: 1.2rem; font-weight: 800; color: var(--color-navy); margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.5px;"><i class="fa-solid fa-couch" style="color: var(--color-slate-blue);"></i> 2. LIVING ROOM & VAULTED CEILING STRUCTURAL REMODEL</h3>
+                <div class="before-after-grid" style="margin-top: 0; margin-bottom: 50px;">
+                    <div class="ba-card">
+                        <span class="ba-badge ba-badge-before">BEFORE • ROOF JOIST DEMO</span>
+                        <div class="ba-img-wrap">
+                            <img src="assets/gorham-before-framing.webp" alt="Original Roof Joists Demolition Before" class="lightbox-trigger" data-caption="12341 Gorham - Stripped Roof Joists & Interior Wall Framing Gutting" width="600" height="400" loading="lazy" decoding="async">
+                        </div>
+                        <div class="ba-caption">
+                            <h4 class="ba-title">Interior Wall & Roof Framing Phase</h4>
+                            <p class="ba-desc">Exposed Douglas fir roof joists, stripped wall studs, and open structural ceiling framing.</p>
+                        </div>
+                    </div>
+                    <div class="ba-card">
+                        <span class="ba-badge ba-badge-after">AFTER • VAULTED LIVING AREA</span>
+                        <div class="ba-img-wrap">
+                            <img src="assets/12341-gorham-living.webp" alt="Completed Living Area After" class="lightbox-trigger" data-caption="12341 Gorham - Open-Concept Vaulted Living & Dining Area" width="600" height="400" loading="lazy" decoding="async">
+                        </div>
+                        <div class="ba-caption">
+                            <h4 class="ba-title">Open-Concept Vaulted Living Suite</h4>
+                            <p class="ba-desc">High vaulted drywall ceilings, recessed LED lighting, light hardwood floors, and open flow into the kitchen.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pair 3: Exterior Alley & Driveway Hardscape -->
+                <h3 style="font-size: 1.2rem; font-weight: 800; color: var(--color-navy); margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.5px;"><i class="fa-solid fa-cloud-sun" style="color: var(--color-slate-blue);"></i> 3. EXTERIOR PATIO & COURTYARD HARDSCAPE</h3>
+                <div class="before-after-grid" style="margin-top: 0; margin-bottom: 50px;">
+                    <div class="ba-card">
+                        <span class="ba-badge ba-badge-before">BEFORE • ORIGINAL ALLEY & GARAGE</span>
+                        <div class="ba-img-wrap">
+                            <img src="assets/gorham-before-garage.webp" alt="Original Garage & Alley Before" class="lightbox-trigger" data-caption="12341 Gorham - Original Garage Structure & Asphalt Alleyway Driveway" width="600" height="400" loading="lazy" decoding="async">
+                        </div>
+                        <div class="ba-caption">
+                            <h4 class="ba-title">Original Garage & Alleyway</h4>
+                            <p class="ba-desc">Cracked asphalt driveway, original stucco garage facade, and chainlink perimeter fencing.</p>
+                        </div>
+                    </div>
+                    <div class="ba-card">
+                        <span class="ba-badge ba-badge-after">AFTER • PRIVATE COURTYARD PATIO</span>
+                        <div class="ba-img-wrap">
+                            <img src="assets/12341-gorham-patio.webp" alt="Completed Courtyard Patio After" class="lightbox-trigger" data-caption="12341 Gorham - Private Courtyard Patio with String Lights & Black Glass Patio Doors" width="600" height="400" loading="lazy" decoding="async">
+                        </div>
+                        <div class="ba-caption">
+                            <h4 class="ba-title">Resort Courtyard Patio Lounge</h4>
+                            <p class="ba-desc">Finished white stucco facade, black trim glass patio doors, outdoor dining lounge, and string lighting overhead.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COMPLETE PHOTO GALLERY -->
             <div style="margin-top: 80px;">
                 <span class="section-tag">AUTHENTIC PROJECT GALLERY</span>
-                <h2 class="section-title">12341 GORHAM CULINARY SUITE PHOTO GALLERY</h2>
+                <h2 class="section-title">12341 GORHAM COMPLETE PHOTO GALLERY</h2>
                 <div class="gallery-grid scroll-animate fade-in-up">
-                    <div class="gallery-card">
-                        <img src="assets/12341-gorham-kitchen.jpg" alt="Gourmet Kitchen" class="lightbox-trigger" data-caption="12341 Gorham - Gourmet Chef Kitchen with Skylight, Navy Blue Accent Cabinets & Marble Island">
-                    </div>
-                    <div class="gallery-card">
-                        <img src="assets/12341-gorham-bath.jpg" alt="Marble Spa Bath" class="lightbox-trigger" data-caption="12341 Gorham - Spa Bathroom with Marble Tile Shower Surround & Black Rain Head">
-                    </div>
-                    <div class="gallery-card">
-                        <img src="assets/12341-gorham-masterheadboard.jpg" alt="Master Bedroom Arched Headboard" class="lightbox-trigger" data-caption="12341 Gorham - Primary Master Bedroom Suite with Arched Antique Wood Headboard Wall & Black Glass Closet">
-                    </div>
-                    <div class="gallery-card">
-                        <img src="assets/12341-gorham-bedroom.jpg" alt="Master Bedroom Suite" class="lightbox-trigger" data-caption="12341 Gorham - Primary Master Bedroom Suite with Vaulted Ceiling & Sliding Closet">
-                    </div>
-                    <div class="gallery-card">
-                        <img src="assets/12341-gorham-living.jpg" alt="Open Living Room" class="lightbox-trigger" data-caption="12341 Gorham - Open Concept Living & Kitchen Area">
-                    </div>
-                    <div class="gallery-card">
-                        <img src="assets/12341-gorham-patio.jpg" alt="Courtyard Patio" class="lightbox-trigger" data-caption="12341 Gorham - Private Courtyard Patio with String Lights & Black Glass Patio Doors">
-                    </div>
+                    <div class="gallery-card"><span class="gallery-badge badge-after">AFTER</span><img src="assets/12341-gorham-kitchen.webp" alt="Gourmet Kitchen" class="lightbox-trigger" data-caption="12341 Gorham - Gourmet Chef Kitchen" width="600" height="400" loading="lazy" decoding="async"></div>
+                    <div class="gallery-card"><span class="gallery-badge badge-after">AFTER</span><img src="assets/12341-gorham-bath.webp" alt="Marble Spa Bath" class="lightbox-trigger" data-caption="12341 Gorham - Spa Bathroom" width="600" height="400" loading="lazy" decoding="async"></div>
+                    <div class="gallery-card"><span class="gallery-badge badge-after">AFTER</span><img src="assets/12341-gorham-masterheadboard.webp" alt="Master Bedroom" class="lightbox-trigger" data-caption="12341 Gorham - Master Bedroom Suite" width="600" height="400" loading="lazy" decoding="async"></div>
+                    <div class="gallery-card"><span class="gallery-badge badge-after">AFTER</span><img src="assets/12341-gorham-bedroom.webp" alt="Bedroom Suite" class="lightbox-trigger" data-caption="12341 Gorham - Vaulted Bedroom" width="600" height="400" loading="lazy" decoding="async"></div>
+                    <div class="gallery-card"><span class="gallery-badge badge-after">AFTER</span><img src="assets/12341-gorham-living.webp" alt="Living Room" class="lightbox-trigger" data-caption="12341 Gorham - Open Living Area" width="600" height="400" loading="lazy" decoding="async"></div>
+                    <div class="gallery-card"><span class="gallery-badge badge-after">AFTER</span><img src="assets/12341-gorham-patio.webp" alt="Courtyard Patio" class="lightbox-trigger" data-caption="12341 Gorham - Courtyard Patio" width="600" height="400" loading="lazy" decoding="async"></div>
+                    <div class="gallery-card"><span class="gallery-badge badge-before">BEFORE</span><img src="assets/gorham-before-skylight.webp" alt="Skylight Framing" class="lightbox-trigger" data-caption="12341 Gorham - Skylight Roof Framing" width="600" height="400" loading="lazy" decoding="async"></div>
+                    <div class="gallery-card"><span class="gallery-badge badge-before">BEFORE</span><img src="assets/gorham-before-framing.webp" alt="Interior Roof Joists" class="lightbox-trigger" data-caption="12341 Gorham - Interior Roof Joist Framing" width="600" height="400" loading="lazy" decoding="async"></div>
+                    <div class="gallery-card"><span class="gallery-badge badge-before">BEFORE</span><img src="assets/gorham-before-scaffolding.webp" alt="Scaffolding Framing" class="lightbox-trigger" data-caption="12341 Gorham - Roof Scaffolding Framing" width="600" height="400" loading="lazy" decoding="async"></div>
+                    <div class="gallery-card"><span class="gallery-badge badge-before">BEFORE</span><img src="assets/gorham-before-garage.webp" alt="Original Garage" class="lightbox-trigger" data-caption="12341 Gorham - Original Garage Facade" width="600" height="400" loading="lazy" decoding="async"></div>
+                    <div class="gallery-card"><span class="gallery-badge badge-before">BEFORE</span><img src="assets/gorham-before-driveway.webp" alt="Original Driveway" class="lightbox-trigger" data-caption="12341 Gorham - Original Asphalt Driveway" width="600" height="400" loading="lazy" decoding="async"></div>
                 </div>
             </div>
         </div>
@@ -151,7 +310,7 @@
                 <div class="info-item"><i class="fa-solid fa-location-dot info-icon"></i><div><span class="info-label">FIND US</span><span class="info-value">1215 Lachman Lane<br>Pacific Palisades, CA 90272</span></div></div>
             </div>
             <div class="footer-cta-right scroll-animate fade-in-right">
-                <div class="footer-logo-wrap"><img src="assets/logo.png" alt="Pacific Remodel and Development logo" class="footer-logo-img"></div>
+                <div class="footer-logo-wrap"><img src="assets/logo.webp" alt="Pacific Remodel and Development logo" class="footer-logo-img" width="180" height="52" fetchpriority="high" decoding="async"></div>
                 <p class="footer-slogan">Locally Owned & Operated in Pacific Palisades</p>
             </div>
         </div>
@@ -164,6 +323,6 @@
     </footer>
 
     <div class="lightbox-modal" id="lightboxModal"><span class="lightbox-close" id="lightboxClose">&times;</span><img class="lightbox-content" id="lightboxImg" alt="Expanded Project Image"><div class="lightbox-caption" id="lightboxCaption"></div></div>
-    <script src="app.js"></script>
+    <script src="app.js" defer></script>
 </body>
 </html>
